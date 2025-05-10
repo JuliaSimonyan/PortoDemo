@@ -1,0 +1,142 @@
+﻿@{
+    ViewData["Title"] = "Integrate";
+    var currentCulture = Context.Request.Cookies["UserCulture"] ?? "en";
+}
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campana - Integrate</title>
+    <link href="~/css/main.css" rel="stylesheet" />
+    <link href="~/css/integrate.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Hero Section with Integrated Header -->
+    <section class="hero-section integrate-hero">
+        <div class="hero-overlay integrate-overlay"></div>
+        <div class="container position-relative">
+            <!-- Header/Navigation -->
+            <partial name="_menuPartial" />
+
+            <!-- Integrate Hero Content -->
+            <div class="row integrate-hero-content">
+                <div class="col-lg-7">
+                    <div class="integrate-badge">Integrate</div>
+                    <h1>Join the Community & Get Involved</h1>
+                    <p class="integrate-subtitle">Becoming part of a community makes life so much easier and infinitely enjoyable.</p>
+                    <ul class="integrate-features">
+                        <li><i class="fas fa-check-circle"></i> Make new friends</li>
+                        <li><i class="fas fa-check-circle"></i> Join discussions & find events happening near you, including social and networking activities and events</li>
+                        <li><i class="fas fa-check-circle"></i> Connect with locals who can help you navigate your new home</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Events CTA Section -->
+    <section class="events-cta-section">
+        <div class="container">
+            <div class="events-cta-content text-center">
+                <h2>Explore upcoming events & start connecting today!</h2>
+                <p>Whether you're new to Porto or have been here for a while, this space is for you!</p>
+                <div class="cta-buttons">
+                    <a href="#" class="btn-view-map">View Events On Map</a>
+                    <a href="#" class="btn-join-forum">Join The Community Forum</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Community Events Map Section -->
+    <section class="events-map-section">
+        <div class="container">
+            <h2 class="text-center">Community Events Map</h2>
+            <div class="map-intro text-center">
+                <p class="looking-text">Looking for something to do?</p>
+                <p>Our interactive map shows community events, workshops, and gatherings near you.<br>Find activities that match your interests and meet new people in a friendly environment.</p>
+                <a href="#" class="btn-browse-events">Browse Events</a>
+
+            </div>
+
+            <div class="map-container">
+                <div class="map-frame">
+                    <img src="~/Images/image (6).png" alt="Porto Community Events Map" class="events-map">
+                </div>
+                <div class="text-center mt-4">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Chat & Connect Section -->
+    <section class="chat-connect-section">
+        <div class="container">
+            <h2 class="text-center">Chat & Connect</h2>
+            <div class="chat-intro text-center">
+                <p class="question-text">Have a question? Need advice? Want to share your experiences?</p>
+                <p class="forum-desc">The community forum is a place to ask, support each other, and exchange useful information.</p>
+                <p class="join-text">Join Discussions In These Categories</p>
+            </div>
+
+            <div class="category-grid">
+                <div class="row">
+                    <div class="col-md-3 col-sm-6">
+                        <div class="category-card">
+                            <div class="category-icon">
+                                <img src="~/Images/Integrate/Frame.png" alt="Life Category Icon">
+                            </div>
+                            <h4>LIVE</h4>
+                            <p>Talk About Housing, Healthcare, And Daily Life Topics</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="category-card">
+                            <div class="category-icon">
+                                <img src="~/Images/Integrate/Frame (1).png" alt="Work Category Icon">
+                            </div>
+                            <h4>WORK</h4>
+                            <p>Ask Questions About Jobs, Training, And Professional Development</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="category-card">
+                            <div class="category-icon">
+                                <img src="~/Images/Integrate/Frame (2).png" alt="Integrate Category Icon">
+                            </div>
+                            <h4>INTEGRATE</h4>
+                            <p>Discuss Social Events, Local Culture, And Integration Tips</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="category-card">
+                            <div class="category-icon">
+                                <img src="~/Images/Integrate/Frame (3).png" alt="General Category Icon">
+                            </div>
+                            <h4>GENERAL</h4>
+                            <p>Anything Else You'd Like To Share</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-4">
+                <a href="#" class="btn-enter-forum">Enter The Forum</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

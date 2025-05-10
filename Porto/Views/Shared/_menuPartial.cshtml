@@ -1,0 +1,56 @@
+﻿@{
+    var currentCulture = Context.Request.Cookies["UserCulture"] ?? "en";
+}
+
+<header>
+    <nav class="navbar navbar-expand-lg">
+        <div class="navbar-brand-container">
+            <a class="navbar-brand" href="#">campana</a>
+        </div>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a asp-action="Index" asp-controller="Home" class="nav-link active">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a asp-action="Live" asp-controller="Home" class="nav-link">Live</a>
+                </li>
+                <li class="nav-item">
+                    <a asp-action="Work" asp-controller="Home" class="nav-link">Work</a>
+                </li>
+                <li class="nav-item">
+                    <a asp-action="Integrate" asp-controller="Home" class="nav-link">Integrate</a>
+                </li>
+                <li class="nav-item">
+                    <a asp-action="Contact" asp-controller="Home" class="nav-link">Contact</a>
+                </li>
+                <li class="nav-item">
+                    <form asp-controller="Home" asp-action="ChangeLanguage" method="POST">
+                        <select style="border:none;cursor:pointer; background-color:#000;; color:white;" name="lang" onchange="this.form.submit()">
+                            @if (currentCulture == "en")
+                            {
+                                <option value="en" style="cursor:pointer !important;" selected>English</option>
+                            }
+                            else
+                            {
+                                <option value="en" style="cursor:pointer !important;">English</option>
+                            }
+                            @if (currentCulture == "pt-PT")
+                            {
+                                <option value="pt-PT" style="cursor:pointer !important;" selected>Portugal</option>
+                            }
+                            else
+                            {
+                                <option value="pt-PT" style="cursor:pointer !important;">Portugal</option>
+                            }
+
+                        </select>
+                    </form>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</header>

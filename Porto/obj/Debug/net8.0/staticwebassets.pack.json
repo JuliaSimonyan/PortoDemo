@@ -1,0 +1,409 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\user\\Desktop\\PortoFinal\\Porto\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\Porto.bundle.scp.css",
+      "PackagePath": "staticwebassets\\Porto.gkix0azjho.bundle.scp.css"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\PortoFinal\\Porto\\wwwroot\\Images\\EIFBackground.png",
+      "PackagePath": "staticwebassets\\Images\\EIFBackground.png"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\PortoFinal\\Porto\\wwwroot\\Images\\Frame 2429.png",
+      "PackagePath": "staticwebassets\\Images\\Frame 2429.png"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\PortoFinal\\Porto\\wwwroot\\Images\\Group.png",
+      "PackagePath": "staticwebassets\\Images\\Group.png"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\PortoFinal\\Porto\\wwwroot\\Images\\Integrate\\Frame (1).png",
+      "PackagePath": "staticwebassets\\Images\\Integrate\\Frame (1).png"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\PortoFinal\\Porto\\wwwroot\\Images\\Integrate\\Frame (2).png",
+      "PackagePath": "staticwebassets\\Images\\Integrate\\Frame (2).png"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\PortoFinal\\Porto\\wwwroot\\Images\\Integrate\\Frame (3).png",
+      "PackagePath": "staticwebassets\\Images\\Integrate\\Frame (3).png"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\PortoFinal\\Porto\\wwwroot\\Images\\Integrate\\Frame 2431.png",
+      "PackagePath": "staticwebassets\\Images\\Integrate\\Frame 2431.png"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\PortoFinal\\Porto\\wwwroot\\Images\\Integrate\\Frame.png",
+      "PackagePath": "staticwebassets\\Images\\Integrate\\Frame.png"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\PortoFinal\\Porto\\wwwroot\\Images\\Integrate\\header.png",
+      "PackagePath": "staticwebassets\\Images\\Integrate\\header.png"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\PortoFinal\\Porto\\wwwroot\\Images\\Live\\Frame (10).png",
+      "PackagePath": "staticwebassets\\Images\\Live\\Frame (10).png"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\PortoFinal\\Porto\\wwwroot\\Images\\Live\\Frame (11).png",
+      "PackagePath": "staticwebassets\\Images\\Live\\Frame (11).png"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\PortoFinal\\Porto\\wwwroot\\Images\\Live\\Frame (12).png",
+      "PackagePath": "staticwebassets\\Images\\Live\\Frame (12).png"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\PortoFinal\\Porto\\wwwroot\\Images\\Live\\Frame (13).png",
+      "PackagePath": "staticwebassets\\Images\\Live\\Frame (13).png"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\PortoFinal\\Porto\\wwwroot\\Images\\Live\\Frame (14).png",
+      "PackagePath": "staticwebassets\\Images\\Live\\Frame (14).png"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\PortoFinal\\Porto\\wwwroot\\Images\\Live\\Frame (4).png",
+      "PackagePath": "staticwebassets\\Images\\Live\\Frame (4).png"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\PortoFinal\\Porto\\wwwroot\\Images\\Live\\Frame (5).png",
+      "PackagePath": "staticwebassets\\Images\\Live\\Frame (5).png"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\PortoFinal\\Porto\\wwwroot\\Images\\Live\\Frame (6).png",
+      "PackagePath": "staticwebassets\\Images\\Live\\Frame (6).png"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\PortoFinal\\Porto\\wwwroot\\Images\\Live\\Frame (7).png",
+      "PackagePath": "staticwebassets\\Images\\Live\\Frame (7).png"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\PortoFinal\\Porto\\wwwroot\\Images\\Live\\Frame (8).png",
+      "PackagePath": "staticwebassets\\Images\\Live\\Frame (8).png"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\PortoFinal\\Porto\\wwwroot\\Images\\Live\\Frame (9).png",
+      "PackagePath": "staticwebassets\\Images\\Live\\Frame (9).png"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\PortoFinal\\Porto\\wwwroot\\Images\\Live\\Header.png",
+      "PackagePath": "staticwebassets\\Images\\Live\\Header.png"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\PortoFinal\\Porto\\wwwroot\\Images\\WorkHeader.png",
+      "PackagePath": "staticwebassets\\Images\\WorkHeader.png"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\PortoFinal\\Porto\\wwwroot\\Images\\eiflogo.png",
+      "PackagePath": "staticwebassets\\Images\\eiflogo.png"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\PortoFinal\\Porto\\wwwroot\\Images\\header.png",
+      "PackagePath": "staticwebassets\\Images\\header.png"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\PortoFinal\\Porto\\wwwroot\\Images\\image (6).png",
+      "PackagePath": "staticwebassets\\Images\\image (6).png"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\PortoFinal\\Porto\\wwwroot\\Images\\porto1.png",
+      "PackagePath": "staticwebassets\\Images\\porto1.png"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\PortoFinal\\Porto\\wwwroot\\Images\\porto2.png",
+      "PackagePath": "staticwebassets\\Images\\porto2.png"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\PortoFinal\\Porto\\wwwroot\\Images\\porto3.png",
+      "PackagePath": "staticwebassets\\Images\\porto3.png"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\PortoFinal\\Porto\\wwwroot\\Images\\porto4.png",
+      "PackagePath": "staticwebassets\\Images\\porto4.png"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\PortoFinal\\Porto\\wwwroot\\css\\admin.css",
+      "PackagePath": "staticwebassets\\css\\admin.css"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\PortoFinal\\Porto\\wwwroot\\css\\integrate.css",
+      "PackagePath": "staticwebassets\\css\\integrate.css"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\PortoFinal\\Porto\\wwwroot\\css\\live.css",
+      "PackagePath": "staticwebassets\\css\\live.css"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\PortoFinal\\Porto\\wwwroot\\css\\login.css",
+      "PackagePath": "staticwebassets\\css\\login.css"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\PortoFinal\\Porto\\wwwroot\\css\\main.css",
+      "PackagePath": "staticwebassets\\css\\main.css"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\PortoFinal\\Porto\\wwwroot\\css\\site.css",
+      "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\PortoFinal\\Porto\\wwwroot\\css\\work.css",
+      "PackagePath": "staticwebassets\\css\\work.css"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\PortoFinal\\Porto\\wwwroot\\favicon.ico",
+      "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\PortoFinal\\Porto\\wwwroot\\js\\site.js",
+      "PackagePath": "staticwebassets\\js\\site.js"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\PortoFinal\\Porto\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "PackagePath": "staticwebassets\\lib\\bootstrap"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\PortoFinal\\Porto\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\PortoFinal\\Porto\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\PortoFinal\\Porto\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\PortoFinal\\Porto\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\PortoFinal\\Porto\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\PortoFinal\\Porto\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\PortoFinal\\Porto\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\PortoFinal\\Porto\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\PortoFinal\\Porto\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\PortoFinal\\Porto\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\PortoFinal\\Porto\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\PortoFinal\\Porto\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\PortoFinal\\Porto\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\PortoFinal\\Porto\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\PortoFinal\\Porto\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\PortoFinal\\Porto\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\PortoFinal\\Porto\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\PortoFinal\\Porto\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\PortoFinal\\Porto\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\PortoFinal\\Porto\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\PortoFinal\\Porto\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\PortoFinal\\Porto\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\PortoFinal\\Porto\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\PortoFinal\\Porto\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\PortoFinal\\Porto\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\PortoFinal\\Porto\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\PortoFinal\\Porto\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\PortoFinal\\Porto\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\PortoFinal\\Porto\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\PortoFinal\\Porto\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\PortoFinal\\Porto\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\PortoFinal\\Porto\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\PortoFinal\\Porto\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\PortoFinal\\Porto\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\PortoFinal\\Porto\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\PortoFinal\\Porto\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\PortoFinal\\Porto\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\PortoFinal\\Porto\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\PortoFinal\\Porto\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\PortoFinal\\Porto\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\PortoFinal\\Porto\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\PortoFinal\\Porto\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\PortoFinal\\Porto\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\PortoFinal\\Porto\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\PortoFinal\\Porto\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\PortoFinal\\Porto\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\PortoFinal\\Porto\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\PortoFinal\\Porto\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\PortoFinal\\Porto\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\PortoFinal\\Porto\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\PortoFinal\\Porto\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\PortoFinal\\Porto\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\PortoFinal\\Porto\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\PortoFinal\\Porto\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\PortoFinal\\Porto\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\PortoFinal\\Porto\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.Porto.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.Porto.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.Porto.props",
+      "PackagePath": "build\\Porto.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.Porto.props",
+      "PackagePath": "buildMultiTargeting\\Porto.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.Porto.props",
+      "PackagePath": "buildTransitive\\Porto.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

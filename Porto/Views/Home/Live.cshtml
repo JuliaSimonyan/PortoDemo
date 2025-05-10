@@ -1,0 +1,189 @@
+﻿@{
+    ViewData["Title"] = "Live";
+    var currentCulture = Context.Request.Cookies["UserCulture"] ?? "en";
+}
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campana - Live Comfortably in Porto</title>
+
+    <link href="~/css/live.css" rel="stylesheet" />
+    <link href="~/css/main.css" rel="stylesheet" />
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Hero Section with Integrated Header -->
+    <section class="hero-section live-hero">
+        <div class="hero-overlay live-overlay"></div>
+        <div class="container position-relative">
+            <!-- Header/Navigation -->
+            <partial name="_menuPartial" />
+
+            <!-- Live Hero Content -->
+            <div class="row live-hero-content">
+                <div class="col-lg-8">
+                    <div class="live-badge">Live</div>
+                    <h1>Find What You Need to Live Comfortably in Porto</h1>
+                    <p class="live-subtitle">Looking for essential services in Porto?</p>
+                    <div class="chatbot-intro">
+                        <h3>Our smart chatbot is here to help!</h3>
+                        <p>Instantly find information about housing, education, healthcare, all documentation, and more — all in one place. Just ask, and get the support you need in seconds.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Chatbot Section -->
+    <section class="chatbot-section">
+        <div class="container">
+            <h2>What Can You Ask the Chatbot About?</h2>
+
+            <div class="chatbot-grid">
+                <!-- Housing Opportunities -->
+                <div class="chatbot-card">
+                    <div class="card-icon">
+                        <img src="~/Images/Live/Frame (4).png" alt="Housing icon">
+                    </div>
+                    <div class="card-content">
+                        <h3>Housing Opportunities</h3>
+                        <p>Find accommodation and rental options.</p>
+                    </div>
+                    <div class="card-arrow">
+                        <i class="fas fa-chevron-right"></i>
+                    </div>
+                </div>
+
+                <!-- Education -->
+                <div class="chatbot-card">
+                    <div class="card-icon">
+                        <img src="~/Images/Live/Frame (10).png" alt="Education icon">
+                    </div>
+                    <div class="card-content">
+                        <h3>Education</h3>
+                        <p>Discover schools, language courses, and training programs.</p>
+                    </div>
+                </div>
+
+                <!-- Social Help -->
+                <div class="chatbot-card">
+                    <div class="card-icon">
+                        <img src="~/Images/Live/Frame (5).png" alt="Social Help icon">
+                    </div>
+                    <div class="card-content">
+                        <h3>Social Help</h3>
+                        <p>Get support for social integration and local assistance programs.</p>
+                    </div>
+                </div>
+
+                <!-- Health -->
+                <div class="chatbot-card">
+                    <div class="card-icon">
+                        <img src="~/Images/Live/Frame (11).png" alt="Health icon">
+                    </div>
+                    <div class="card-content">
+                        <h3>Health</h3>
+                        <p>Learn about medical centers, insurance, and well-being services.</p>
+                    </div>
+                </div>
+
+                <!-- Documentation -->
+                <div class="chatbot-card">
+                    <div class="card-icon">
+                        <img src="~/Images/Live/Frame (6).png" alt="Documentation icon">
+                    </div>
+                    <div class="card-content">
+                        <h3>Documentation</h3>
+                        <p>Get guidance on residency, work permits, and legal documents.</p>
+                    </div>
+                </div>
+
+                <!-- Job & Professional Training -->
+                <div class="chatbot-card">
+                    <div class="card-icon">
+                        <img src="~/Images/Live/Frame (12).png" alt="Job icon">
+                    </div>
+                    <div class="card-content">
+                        <h3>Job & Professional Training</h3>
+                        <p>Explore job listings and career development opportunities.</p>
+                    </div>
+                </div>
+
+                <!-- Improving Conversation Skills -->
+                <div class="chatbot-card">
+                    <div class="card-icon">
+                        <img src="~/Images/Live/Frame (7).png" alt="Conversation icon">
+                    </div>
+                    <div class="card-content">
+                        <h3>Improving Conversation Skills</h3>
+                        <p>Find language programs and courses.</p>
+                    </div>
+                </div>
+
+                <!-- Best Places to Shop -->
+                <div class="chatbot-card">
+                    <div class="card-icon">
+                        <img src="~/Images/Live/Frame (13).png" alt="Shop icon">
+                    </div>
+                    <div class="card-content">
+                        <h3>Best Places to Shop</h3>
+                        <p>Locate markets, stores, and budget-friendly shopping spots.</p>
+                    </div>
+                </div>
+
+                <!-- Exchange Markets -->
+                <div class="chatbot-card">
+                    <div class="card-icon">
+                        <img src="~/Images/Live/Frame (8).png" alt="Exchange icon">
+                    </div>
+                    <div class="card-content">
+                        <h3>Exchange Markets</h3>
+                        <p>Discover second-hand and community swap markets.</p>
+                    </div>
+                </div>
+
+                <!-- Mobility & Transport -->
+                <div class="chatbot-card">
+                    <div class="card-icon">
+                        <img src="~/Images/Live/Frame (14).png" alt="Mobility icon">
+                    </div>
+                    <div class="card-content">
+                        <h3>Mobility & Transport</h3>
+                        <p>Learn about public transport, bike-sharing, and travel tips.</p>
+                    </div>
+                </div>
+
+                <!-- Outdoor & Recreational Spaces -->
+                <div class="chatbot-card">
+                    <div class="card-icon">
+                        <img src="~/Images/Live/Frame (9).png" alt="Outdoor icon">
+                    </div>
+                    <div class="card-content">
+                        <h3>Outdoor & Recreational Spaces</h3>
+                        <p>Find parks, sports areas, and leisure spots.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="chat-button-container">
+                <button class="btn start-chat-btn">Start Chatting</button>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

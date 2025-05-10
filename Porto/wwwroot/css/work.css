@@ -1,0 +1,448 @@
+/* Work Page Specific Styles */
+
+/* Hero Section */
+.work-hero {
+    background-image: url('../images/WorkHeader.png');
+    min-height: 80vh;
+    position: relative;
+}
+
+.work-overlay {
+    background: 
+    linear-gradient(130deg, #001c78bb 6.8%, rgba(0, 28, 120, 0) 95.83%),
+    linear-gradient(to right, #7320e8aa 50%);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.container.position-relative {
+    z-index: 2;
+}
+
+.work-hero-content {
+    padding-top: 120px;
+    padding-bottom: 60px;
+}
+
+.work-badge {
+    display: inline-block;
+    color: white;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.work-hero h1 {
+    font-size: 42px;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    color: white;
+    font-weight: 700;
+}
+
+.work-subtitle {
+    font-size: 18px;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 5px !important;
+}
+
+.work-description {
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 30px;
+}
+
+/* Training Programs Section */
+.training-section {
+    background: linear-gradient(180deg, #ffffff 0%, #e6f0ff 100%);
+    padding: 60px 0;
+}
+
+.training-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.training-content h2 {
+    color: #00428C;
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    line-height: 1.3;
+}
+
+.training-content p {
+    color: #555;
+    font-size: 15px;
+    margin-bottom: 25px;
+}
+
+.explore-trainings-btn {
+    display: inline-block;
+    background: #00428C;
+    color: white;
+    text-decoration: none;
+    padding: 10px 25px;
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.explore-trainings-btn:hover {
+    background: #003371;
+    color: white;
+}
+
+/* AI Career Chat Section */
+.ai-chat-section {
+    background: linear-gradient(180deg, #b3d4ff 0%, #4d94ff 100%);
+    padding: 60px 0;
+}
+
+.ai-chat-section h2 {
+    color: #00428C;
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.chat-intro {
+    margin-bottom: 25px;
+}
+
+.chat-intro h3 {
+    color: #00428C;
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.chat-intro p {
+    color: #00428C;
+    font-size: 15px;
+    margin-bottom: 0;
+}
+
+.career-topics {
+    max-width: 850px;
+    margin: 0 auto 30px;
+}
+
+.career-topic-item {
+    margin-bottom: 10px;
+}
+
+.career-topic-btn {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    background-color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 12px 20px;
+    text-align: left;
+    font-size: 14px;
+    color: #333;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.career-topic-btn:hover {
+    background-color: #f8f9fa;
+}
+
+.career-topic-btn i {
+    color: #00428C;
+    font-size: 12px;
+}
+
+.chat-cta {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.chat-cta p {
+    color: #00428C;
+    font-size: 15px;
+    margin-bottom: 20px;
+}
+
+.chat-assistant-btn {
+    display: inline-block;
+    background: #00428C;
+    color: white;
+    text-decoration: none;
+    padding: 10px 25px;
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.chat-assistant-btn:hover {
+    background: #003371;
+    color: white;
+}
+
+/* Submit CV Section */
+.submit-cv-section {
+    background-color: #ffffff;
+    padding: 148px 0;
+    background-image: url('../images/Frame\ 2429.png');
+    background-size: cover;
+    background-position: center;
+}
+
+.cv-card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+    padding: 40px;
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+.cv-card-content {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.cv-card h2 {
+    color: #00428C;
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.cv-card h3 {
+    color: #00428C;
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.cv-card p {
+    color: #555;
+    font-size: 14px;
+    margin-bottom: 25px;
+    line-height: 1.5;
+}
+
+.cv-form {
+    width: 100%;
+}
+
+.input-row {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    align-items: center;
+}
+
+.email-input-container {
+    flex: 1;
+}
+
+.attach-btn-container {
+    flex: 0 0 auto;
+}
+
+.cv-form .form-control {
+    padding: 10px 15px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    font-size: 14px;
+    width: 100%;
+    height: 38px;
+}
+
+.cv-form .form-control:focus {
+    border-color: #00428C;
+    box-shadow: 0 0 0 0.25rem rgba(0, 66, 140, 0.25);
+}
+
+.attach-cv-btn {
+    margin-bottom: 15px;
+    display: inline-block;
+    background-color: #b3d4ff;
+    color: #00428C;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 14px;
+    height: 38px;
+    white-space: nowrap;
+}
+
+.attach-cv-btn:hover {
+    background-color: #99c2ff;
+}
+
+.attach-cv-btn i {
+    margin-right: 5px;
+}
+
+.submit-container {
+    text-align: center;
+}
+
+.submit-btn {
+    background: #00428C;
+    color: white;
+    border: none;
+    padding: 10px 25px;
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+    min-width: 100px;
+}
+
+.submit-btn:hover {
+    background: #003371;
+}
+
+/* Responsive Styles */
+@media (max-width: 1199px) {
+    .work-hero h1 {
+        font-size: 36px;
+    }
+}
+
+@media (max-width: 991px) {
+    .work-hero-content {
+        padding-top: 100px;
+    }
+    
+    .work-hero h1 {
+        font-size: 32px;
+    }
+    
+    .work-subtitle {
+        font-size: 16px;
+    }
+    
+    .work-description {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 767px) {
+    .work-hero {
+        min-height: auto;
+    }
+    
+    .work-hero-content {
+        padding-top: 80px;
+        padding-bottom: 40px;
+    }
+    
+    .work-hero h1 {
+        font-size: 28px;
+    }
+    
+    .training-section,
+    .ai-chat-section,
+    .submit-cv-section {
+        padding: 40px 0;
+    }
+    
+    .training-content h2,
+    .ai-chat-section h2 {
+        font-size: 22px;
+    }
+    
+    .chat-intro h3 {
+        font-size: 17px;
+    }
+    
+    .cv-card {
+        padding: 30px 20px;
+    }
+}
+
+@media (max-width: 575px) {
+    .work-badge {
+        padding: 6px 15px;
+        font-size: 14px;
+    }
+    
+    .work-hero h1 {
+        font-size: 24px;
+    }
+    
+    .work-subtitle {
+        font-size: 15px;
+    }
+    
+    .work-description {
+        font-size: 14px;
+    }
+    
+    .training-content h2,
+    .ai-chat-section h2 {
+        font-size: 20px;
+    }
+    
+    .chat-intro h3 {
+        font-size: 16px;
+    }
+    
+    .career-topic-btn {
+        padding: 10px 15px;
+        font-size: 13px;
+    }
+    
+    .cv-card {
+        padding: 25px 15px;
+    }
+    
+    .cv-card h2 {
+        font-size: 20px;
+    }
+    
+    .cv-card h3 {
+        font-size: 16px;
+    }
+    
+    .input-row {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .email-input-container,
+    .attach-btn-container {
+        width: 100%;
+    }
+    
+    .attach-cv-btn {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .work-hero-content {
+        padding-top: 60px;
+    }
+    
+    .work-hero h1 {
+        font-size: 22px;
+    }
+    
+    .training-section,
+    .ai-chat-section,
+    .submit-cv-section {
+        padding: 30px 0;
+    }
+    
+    .cv-form .form-control {
+        padding: 8px 12px;
+    }
+}

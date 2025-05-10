@@ -1,0 +1,357 @@
+/* Live Page Specific Styles */
+
+/* Hero Section */
+.live-hero {
+    position: relative;
+    background-image: url('../images/Live/Header.png');
+    background-size: cover;
+    background-position: center;
+    min-height: 80vh;
+    overflow: hidden;
+  }
+  
+  .live-overlay {
+    position: absolute;
+    inset: 0; /* shorthand for top: 0; right: 0; bottom: 0; left: 0; */
+    background: 
+      linear-gradient(130deg, #001C78 6.8%, rgba(0, 28, 120, 0.116) 95.83%),
+      linear-gradient(120deg,rgba(0, 0, 0, 0) 0%, rgba(18, 148, 66, 0.735) 0%);
+    background-blend-mode: overlay;
+    pointer-events: none; /* optional: lets clicks pass through */
+  }
+  
+
+.live-hero-content {
+    padding-top: 120px;
+    padding-bottom: 60px;
+}
+
+.live-badge {
+    display: inline-block;
+    color: white;
+    font-weight: 400;
+    font-size: 32px;
+    margin-bottom: 20px;
+    backdrop-filter: blur(5px);
+}
+
+.live-hero h1 {
+    font-size: 54px;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.live-subtitle {
+    font-size: 22px;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 0 !important;
+}
+
+.chatbot-intro {
+    margin-top: 30px;
+}
+
+.chatbot-intro h3 {
+    color: white;
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.chatbot-intro p {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 0;
+}
+
+/* Chatbot Section */
+.chatbot-section {
+    background: linear-gradient(180deg, #EDF5FF 0%, #D6E8FF 100%);
+    padding: 60px 0 80px;
+}
+
+.chatbot-section h2 {
+    color: #00428C;
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.chatbot-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    max-width: 1000px;
+    margin: 0 auto 40px;
+}
+
+.chatbot-card {
+    background-color: white;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 66, 140, 0.05);
+    padding: 24px;
+    display: flex;
+    align-items: flex-start;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    position: relative;
+}
+
+.chatbot-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0, 66, 140, 0.1);
+}
+
+.card-icon {
+    width: 48px;
+    height: 48px;
+    min-width: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 16px;
+}
+
+.card-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.card-content {
+    flex: 1;
+}
+
+.card-content h3 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #00428C;
+    margin-bottom: 4px;
+    line-height: 1.3;
+}
+
+.card-content p {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 0;
+    line-height: 1.4;
+}
+
+.card-arrow {
+    position: absolute;
+    right: 24px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #00428C;
+    font-size: 14px;
+    opacity: 0.7;
+}
+
+.chat-button-container {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.start-chat-btn {
+    width:479px;
+    height: 70px;
+    background: linear-gradient(258.47deg, #00428C 0%, #00428C 100%);
+    border: none;
+    color: white !important;
+    padding: 14px 40px;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+    min-width: 200px;
+}
+
+.start-chat-btn:hover {
+    background: #003371;
+}
+
+/* Font Awesome Icons (temporary solution) */
+.card-icon i {
+    font-size: 24px;
+    color: #00428C;
+}
+
+/* Responsive Styles */
+@media (max-width: 1199px) {
+    .live-hero h1 {
+        font-size: 38px;
+    }
+    
+   
+    
+    .chatbot-section h2 {
+        font-size: 28px;
+    }
+}
+
+@media (max-width: 991px) {
+    .live-hero-content {
+        padding-top: 100px;
+    }
+    
+    .live-hero h1 {
+        font-size: 32px;
+    }
+    
+    .live-subtitle {
+        font-size: 18px;
+    }
+    
+    .chatbot-intro h3 {
+        font-size: 20px;
+    }
+    
+    .chatbot-intro p {
+        font-size: 15px;
+    }
+    
+    .chatbot-section h2 {
+        font-size: 26px;
+    }
+    
+    .chatbot-grid {
+        gap: 12px;
+    }
+    
+    .chatbot-card {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 767px) {
+    .live-hero {
+        min-height: auto;
+    }
+    
+    .live-hero-content {
+        padding-top: 80px;
+        padding-bottom: 40px;
+    }
+    
+    .live-hero h1 {
+        font-size: 28px;
+    }
+    
+    .live-subtitle {
+        font-size: 16px;
+        margin-bottom: 20px;
+    }
+    
+    .chatbot-intro {
+        margin-top: 20px;
+    }
+    
+    .chatbot-intro h3 {
+        font-size: 18px;
+    }
+    
+    .chatbot-intro p {
+        font-size: 14px;
+    }
+    
+    .chatbot-section {
+        padding: 40px 0 60px;
+    }
+    
+    .chatbot-section h2 {
+        font-size: 24px;
+        margin-bottom: 30px;
+    }
+    
+    .chatbot-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .card-icon {
+        width: 40px;
+        height: 40px;
+        min-width: 40px;
+    }
+    
+    .card-content h3 {
+        font-size: 16px;
+    }
+    
+    .card-arrow {
+        right: 20px;
+    }
+}
+
+@media (max-width: 575px) {
+    .live-badge {
+        font-size: 14px;
+    }
+    
+    .live-hero h1 {
+        font-size: 24px;
+    }
+    
+    .chatbot-section h2 {
+        font-size: 22px;
+    }
+    
+    .chatbot-card {
+        padding: 16px;
+    }
+    
+    .start-chat-btn {
+        padding: 12px 30px;
+        font-size: 15px;
+    }
+    
+    .card-arrow {
+        right: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .live-hero-content {
+        padding-top: 60px;
+    }
+    
+    .live-hero h1 {
+        font-size: 22px;
+    }
+    
+    .live-subtitle {
+        font-size: 14px;
+    }
+    
+    .chatbot-intro h3 {
+        font-size: 16px;
+    }
+    
+    .chatbot-intro p {
+        font-size: 13px;
+    }
+    
+    .chatbot-section {
+        padding: 30px 0 50px;
+    }
+    
+    .chatbot-section h2 {
+        font-size: 20px;
+    }
+    
+    .card-icon {
+        width: 36px;
+        height: 36px;
+        min-width: 36px;
+        margin-right: 12px;
+    }
+    
+    .card-content h3 {
+        font-size: 15px;
+    }
+    
+    .card-content p {
+        font-size: 12px;
+    }
+}

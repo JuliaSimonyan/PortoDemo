@@ -1,0 +1,434 @@
+/* Integrate Page Specific Styles */
+
+/* Hero Section */
+.integrate-hero {
+    background-image: url('../images/Integrate/header.png');
+    min-height: 80vh;
+    position: relative;
+}
+
+.integrate-overlay {
+    background: 
+    linear-gradient(to right, rgba(0, 66, 140, 0.9) 0%, rgba(255, 183, 82, 0.7) 100%);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.container.position-relative {
+    z-index: 2;
+}
+
+.integrate-hero-content {
+    padding-top: 120px;
+    padding-bottom: 60px;
+}
+
+.integrate-badge {
+    display: inline-block;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white;
+    padding: 8px 20px;
+    border-radius: 30px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    backdrop-filter: blur(5px);
+}
+
+.integrate-hero h1 {
+    font-size: 42px;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    color: white;
+    font-weight: 700;
+}
+
+.integrate-subtitle {
+    font-size: 18px;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 20px;
+}
+
+.integrate-features {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.integrate-features li {
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 10px;
+    font-size: 16px;
+    display: flex;
+    align-items: flex-start;
+}
+
+.integrate-features li i {
+    color: #ffffff;
+    margin-right: 10px;
+    font-size: 18px;
+    margin-top: 2px;
+}
+
+/* Events CTA Section */
+.events-cta-section {
+    background-color: white;
+    padding: 40px 0;
+}
+
+.events-cta-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.events-cta-content h2 {
+    color: #00428C;
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.events-cta-content p {
+    color: #555;
+    font-size: 14px;
+    margin-bottom: 25px;
+}
+
+.cta-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.btn-view-map {
+    display: inline-block;
+    background: #00428C;
+    color: white;
+    text-decoration: none;
+    padding: 8px 20px;
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-view-map:hover {
+    background: #003371;
+    color: white;
+}
+
+.btn-join-forum {
+    display: inline-block;
+    background: #8FC8F2;
+    color: #00428C;
+    text-decoration: none;
+    padding: 8px 20px;
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.btn-join-forum:hover {
+    background: rgba(0, 66, 140, 0.1);
+    color: #00428C;
+}
+
+/* Community Events Map Section */
+.events-map-section {
+    background: linear-gradient(180deg, #7fb9ff 0%, #4d94ff 100%);
+    padding: 50px 0 60px;
+}
+
+.events-map-section h2 {
+    color: #00428C;
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.map-intro {
+    margin-bottom: 25px;
+}
+
+.map-intro p {
+    color: #00428C;
+    font-size: 14px;
+    margin-bottom: 8px;
+    line-height: 1.5;
+}
+
+.map-intro .looking-text {
+    font-weight: 600;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.map-container {
+    width: 93%;
+    height: 600px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.map-frame {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    position: relative;
+    background-image: url('../images/Integrate/Frame\ 2431.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+
+.map-frame::before {
+    content: '';
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    right: -20px;
+    bottom: -20px;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    z-index: -1;
+}
+
+.events-map {
+    display: block;
+    margin: 70px auto;
+    width: 80%;
+    height: auto;
+    display: block;
+}
+
+.btn-browse-events {
+    display: inline-block;
+    background: #00428C;
+    color: white;
+    text-decoration: none;
+    padding: 8px 25px;
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+}
+
+.btn-browse-events:hover {
+    background: #003371;
+    color: white;
+}
+
+/* Chat & Connect Section */
+.chat-connect-section {
+    background-color: #d6e8ff;
+    padding: 50px 0 60px;
+}
+
+.chat-connect-section h2 {
+    color: #00428C;
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.chat-intro {
+    margin-bottom: 30px;
+}
+
+.chat-intro p {
+    color: #555;
+    font-size: 14px;
+    margin-bottom: 5px;
+    line-height: 1.5;
+}
+
+.chat-intro .question-text {
+    font-weight: 600;
+    font-size: 16px;
+    color: #00428C;
+    margin-bottom: 8px;
+}
+
+.chat-intro .forum-desc {
+    margin-bottom: 20px;
+}
+
+.chat-intro .join-text {
+    font-weight: 600;
+    color: #00428C;
+    margin-bottom: 20px;
+}
+
+.category-grid {
+    margin-bottom: 30px;
+}
+
+.category-card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+    padding: 25px 15px;
+    text-align: center;
+    height: 100%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.category-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.category-icon {
+    margin-bottom: 15px;
+}
+
+.category-icon img {
+    width: 50px;
+    height: 50px;
+}
+
+.category-card h4 {
+    color: #00428C;
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.category-card p {
+    color: #555;
+    font-size: 13px;
+    line-height: 1.4;
+}
+
+.btn-enter-forum {
+    display: inline-block;
+    background: #00428C;
+    color: white;
+    text-decoration: none;
+    padding: 8px 25px;
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-enter-forum:hover {
+    background: #003371;
+    color: white;
+}
+
+/* Responsive Styles */
+@media (max-width: 1199px) {
+    .integrate-hero h1 {
+        font-size: 36px;
+    }
+}
+
+@media (max-width: 991px) {
+    .integrate-hero-content {
+        padding-top: 100px;
+    }
+    
+    .integrate-hero h1 {
+        font-size: 32px;
+    }
+    
+    .integrate-subtitle {
+        font-size: 16px;
+    }
+    
+    .integrate-features li {
+        font-size: 15px;
+    }
+    
+    .category-card {
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 767px) {
+    .integrate-hero {
+        min-height: auto;
+    }
+    
+    .integrate-hero-content {
+        padding-top: 80px;
+        padding-bottom: 40px;
+    }
+    
+    .integrate-hero h1 {
+        font-size: 28px;
+    }
+    
+    .events-cta-section,
+    .events-map-section,
+    .chat-connect-section {
+        padding: 40px 0;
+    }
+    
+    .events-cta-content h2,
+    .events-map-section h2,
+    .chat-connect-section h2 {
+        font-size: 22px;
+    }
+    
+    .category-card {
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 575px) {
+    .integrate-badge {
+        padding: 6px 15px;
+        font-size: 14px;
+    }
+    
+    .integrate-hero h1 {
+        font-size: 24px;
+    }
+    
+    .integrate-subtitle {
+        font-size: 15px;
+    }
+    
+    .integrate-features li {
+        font-size: 14px;
+    }
+    
+    .events-cta-content h2,
+    .events-map-section h2,
+    .chat-connect-section h2 {
+        font-size: 20px;
+    }
+    
+    .btn-view-map,
+    .btn-join-forum,
+    .btn-browse-events,
+    .btn-enter-forum {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+    
+    .cta-buttons {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .integrate-hero-content {
+        padding-top: 60px;
+    }
+    
+    .integrate-hero h1 {
+        font-size: 22px;
+    }
+}

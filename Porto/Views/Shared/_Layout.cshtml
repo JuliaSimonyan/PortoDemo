@@ -1,0 +1,114 @@
+﻿@{
+    var currentCulture = Context.Request.Cookies["UserCulture"] ?? "en";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Porto</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/Porto.styles.css" asp-append-version="true" />
+
+</head>
+<body>
+
+    @*  <partial name="_LoginPartial" /> *@
+    <main role="main">
+        @RenderBody()
+    </main>
+
+    <footer>
+        <div class="footer-main">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+                        <div class="footer-tagline">
+                            <h5>Empowering Communities,<br>Connecting Opportunities.</h5>
+                        </div>
+                        <div class="footer-social">
+                            <h5>Follow Us</h5>
+                            <div class="social-icons">
+                                <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                                <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+                        <h5>Menu</h5>
+                        <ul class="footer-links">
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">Live</a></li>
+                            <li><a href="#">Work</a></li>
+                            <li><a href="#">Integrate</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+                        <h5>About us</h5>
+                        <ul class="footer-links">
+                            <li><a href="#">How it work?</a></li>
+                            <li><a href="#">Help</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <h5>Contact Us</h5>
+                        <ul class="footer-contact">
+                            <li>
+                                <div class="contact-icon">
+                                    <i class="fas fa-phone-alt"></i>
+                                </div>
+                                <div class="contact-info">
+                                    <strong>Call us</strong>
+                                    <span>+1-206-156 2849</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="contact-icon">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div class="contact-info">
+                                    <strong>Mail Us</strong>
+                                    <span>info@campana.com</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="contact-icon">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <div class="contact-info">
+                                    <strong>Visit Us</strong>
+                                    <span>Your Address here</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <p class="copyright">© Campana All Rights Reserved 2025</p>
+                    </div>
+                    <div class="col-md-6">
+                        <ul class="legal-links">
+                            <li><a href="#">Terms of Service</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Accessibility Statement</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
