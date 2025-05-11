@@ -3,13 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.13.35931.197
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Porto", "Porto.csproj", "{224F07FA-F7AB-4F26-929E-68D7F2DD14B3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Porto", "Porto.csproj", "{224F07FA-F7AB-4F26-929E-68D7F2DD14B3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Porto.App", "..\Porto.App\Porto.App.csproj", "{D3CD3A25-D771-4947-B21F-33C28E9A5FB8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Porto.App", "..\Porto.App\Porto.App.csproj", "{D3CD3A25-D771-4947-B21F-33C28E9A5FB8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Porto.Common", "..\Porto.Common\Porto.Common.csproj", "{5DF05EBD-368A-46FC-BAC4-DE9468F72618}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Porto.Common", "..\Porto.Common\Porto.Common.csproj", "{5DF05EBD-368A-46FC-BAC4-DE9468F72618}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Porto.Data", "..\Porto.Data\Porto.Data.csproj", "{FEB664DC-A889-43D8-A60D-5DE91B3CFCA9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Porto.DLL", "..\Porto.Data\Porto.DLL.csproj", "{FEB664DC-A889-43D8-A60D-5DE91B3CFCA9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

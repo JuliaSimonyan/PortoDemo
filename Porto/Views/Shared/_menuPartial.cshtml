@@ -24,12 +24,9 @@
                 <li class="nav-item">
                     <a asp-action="Integrate" asp-controller="Home" class="nav-link">Integrate</a>
                 </li>
-                <li class="nav-item">
-                    <a asp-action="Contact" asp-controller="Home" class="nav-link">Contact</a>
-                </li>
-                <li class="nav-item">
+                <li class="nav-item dropdown">
                     <form asp-controller="Home" asp-action="ChangeLanguage" method="POST">
-                        <select style="border:none;cursor:pointer; background-color:#000;; color:white;" name="lang" onchange="this.form.submit()">
+                        <select class="nav-link dropdown-toggle" data-bs-toggle="dropdown" name="lang" onchange="this.form.submit()">
                             @if (currentCulture == "en")
                             {
                                 <option value="en" style="cursor:pointer !important;" selected>English</option>
@@ -40,15 +37,18 @@
                             }
                             @if (currentCulture == "pt-PT")
                             {
-                                <option value="pt-PT" style="cursor:pointer !important;" selected>Portugal</option>
+                                <option value="pt-PT" style="cursor:pointer !important;"  selected>Portugal</option>
                             }
                             else
                             {
-                                <option value="pt-PT" style="cursor:pointer !important;">Portugal</option>
+                                <option value="pt-PT" style="cursor:pointer !important;" >Portugal</option>
                             }
 
                         </select>
                     </form>
+                </li>
+                <li>
+                    <a asp-area="Identity" asp-page="/Account/Login" class="sign-in-button">Sign in</a>
                 </li>
             </ul>
         </div>

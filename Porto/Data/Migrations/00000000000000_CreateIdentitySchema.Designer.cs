@@ -5,11 +5,11 @@ using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using Porto.Data;
+using Porto.Dataa;
 
-namespace Porto.Data.Migrations
+namespace Porto.Dataa.Migrations
 {
-    [DbContext(typeof(ApplicationDbContext))]
+    //[DbContext(typeof(ApplicationDbContext))]
     [Migration("00000000000000_CreateIdentitySchema")]
     partial class CreateIdentitySchema
     {

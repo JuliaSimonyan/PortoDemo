@@ -60,7 +60,7 @@ a:hover {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(263.76deg, rgba(0, 28, 120, 0) 9.53%, #001C78 97.2%);
+    background: linear-gradient(180deg, #001C78 6.8%, rgba(0, 28, 120, 0) 95.83%), linear-gradient(263.76deg, rgba(0, 28, 120, 0) 9.53%, #001C78 97.2%);
     z-index: 1;
 }
 
@@ -95,7 +95,7 @@ header {
     color: white;
     margin: 0 25px;
     font-weight: 400;
-    font-size: 22px;
+    font-size: 20px;
 }
 
 .navbar-nav .nav-link:hover,
@@ -111,26 +111,113 @@ header {
     background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 255, 255, 0.8)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 }
 
+/* Language Dropdown Styling to match the blue gradient design */
+.nav-item.dropdown {
+    position: relative;
+}
+
+    .nav-item.dropdown form {
+        margin: 0;
+    }
+
+    /* Style the select element */
+    .nav-item.dropdown select.nav-link {
+        appearance: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        background: transparent;
+        border: none;
+        color: white;
+        font-size: 20px;
+        padding: 8px 10px;
+        cursor: pointer;
+        transition: all 0.2s ease;
+    }
+
+    /* Add custom dropdown arrow */
+    .nav-item.dropdown::after {
+        content: '';
+        position: absolute;
+        right: 12px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 0;
+        height: 0;
+        border-left: 4px solid transparent;
+        border-right: 4px solid transparent;
+        border-top: 4px solid white;
+        pointer-events: none;
+    }
+
+    /* Hover state */
+    .nav-item.dropdown select.nav-link:hover {
+        opacity: 0.85;
+    }
+
+    /* Focus state */
+    .nav-item.dropdown select.nav-link:focus {
+        outline: none;
+        box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.25);
+    }
+
+    /* Style the options */
+    .nav-item.dropdown select.nav-link option {
+        background-color: #001C78;
+        color: white;
+        padding: 10px;
+        font-weight: normal;
+    }
+
+/* Remove default dropdown toggle styling */
 .dropdown-toggle::after {
-    vertical-align: middle;
+    display: none;
 }
 
-.dropdown-menu {
-    background-color: var(--primary-color);
+/* Style for the dropdown when open */
+.nav-item.dropdown select.nav-link:focus {
+    border-color: transparent;
+}
+
+/* Make sure text is visible on the blue background */
+.nav-item.dropdown select.nav-link,
+.nav-item.dropdown select.nav-link option {
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+/* Sign in Button Styling */
+.sign-in-button {
+    margin: 0 10px;
+    background-color: white;
+    color: #001C78;
+    font-weight: 500;
+    font-size: 20px;
+    padding: 8px 20px;
+    border-radius: 4px;
     border: none;
-    border-radius: 5px;
-    margin-top: 10px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-decoration: none;
+    display: inline-block;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.dropdown-item {
-    color: rgba(255, 255, 255, 0.8);
-}
+    /* Hover state */
+    .sign-in-button:hover {
+        background-color: rgba(255, 255, 255, 0.9);
+        transform: translateY(-1px);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    }
 
-.dropdown-item:hover {
-    background-color: rgba(255, 255, 255, 0.1);
-    color: white;
-}
+    /* Active/pressed state */
+    .sign-in-button:active {
+        transform: translateY(1px);
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    }
 
+    /* Focus state */
+    .sign-in-button:focus {
+        outline: none;
+        box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.5), 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
 /* Hero Content */
 .hero-content {
     padding-top: 150px;
@@ -162,7 +249,7 @@ header {
     width: 342px;
     height: 80px;
     font-weight: 600;
-    font-size: 22px;
+    font-size: 20px;
     border-radius: 15px;
     color: #1A5597;
     border: none;
@@ -203,7 +290,7 @@ linear-gradient(143.45deg, rgba(0, 66, 140, 0) 28.91%, rgba(0, 66, 140, 0.3) 93.
 }
 
 .community-section h3 {
-    color: var(--primary-color);
+    color: #1A3B85;
     margin-bottom: 20px;
 }
 
@@ -741,10 +828,6 @@ footer h5 {
         height: auto;
     }
     
-    .contact-options {
-        flex-direction: column;
-    }
-    
     .navbar-nav .nav-link {
         margin: 0 15px;
         font-size: 18px;
@@ -819,9 +902,6 @@ footer h5 {
         font-size: 2rem;
     }
     
-    .contact-image-col {
-        display: none;
-    }
     
     .contact-form-col {
         width: 100%;
@@ -859,7 +939,7 @@ footer h5 {
 
 @media (max-width: 767px) {
     .hero-content {
-        padding-top: 60px;
+        padding-top: 150px;
     }
     
     .hero-section {
@@ -961,7 +1041,7 @@ footer h5 {
     }
     
     .contact-options {
-        gap: 10px;
+        gap:0;
     }
     
     .option-btn {
@@ -1028,13 +1108,16 @@ footer h5 {
         font-size: 14px;
         padding: 10px 20px;
     }
-    
+
     .community-section h3 {
-        font-size: 1.5rem;
+        text-align: center;
+        font-size: 36px;
+        font-weight: 600;
     }
     
     .community-section p {
-        font-size: 0.9rem;
+        font-size: 16px;
+        margin: 0 15px;
     }
     
     .feature-content h2 {
@@ -1121,7 +1204,7 @@ footer h5 {
     
     .hero-section .btn-light {
         width: 100%;
-        max-width: 200px;
+        max-width: 410px;
         height: 40px;
         font-size: 14px;
         padding: 8px 16px;
@@ -1133,15 +1216,17 @@ footer h5 {
     }
     
     .implementation-box img {
-        width: 150px;
+        width: 250px;
     }
-    
+
     .implementation-box h4 {
+        text-align: left;
         font-size: 1.3rem;
     }
-    
+
     .implementation-box p {
-        font-size: 0.85rem;
+        text-align: left;
+        font-size: 1rem;
     }
     
     .feature-content {
@@ -1149,26 +1234,26 @@ footer h5 {
     }
     
     .feature-content h2 {
-        font-size: 1.3rem;
+        font-size: 36px;
     }
     
     .feature-content p {
-        font-size: 0.85rem;
+        font-size: 16px;
     }
-    
+
     .btn-primary {
-        width: 110px;
+        width: 350px;
         height: 40px;
-        font-size: 12px !important;
-        padding: 8px 12px !important;
+        font-size: 16px !important;
+        padding: 3px 12px !important;
     }
     
     .contact-section h2 {
-        font-size: 1.3rem;
+        font-size: 2.3rem;
     }
     
     .contact-subtitle {
-        font-size: 0.85rem;
+        font-size: 1.rem;
     }
     
     .option-btn {
@@ -1189,8 +1274,117 @@ footer h5 {
     }
     
     .submit-btn {
-        width: 100px;
+        width: 360px;
         padding: 8px 15px;
         font-size: 0.85rem;
+    }
+}
+
+/* Sign in Button Responsive Styles */
+@media (max-width: 991px) {
+    .sign-in-button {
+        font-size: 16px;
+        padding: 6px 16px;
+        margin: 10px 0;
+        display: inline-block;
+        width: auto;
+    }
+    
+    /* Center the button in mobile navbar */
+    .navbar-collapse .sign-in-button {
+        display: table;
+    }
+}
+
+@media (max-width: 767px) {
+    .sign-in-button {
+        font-size: 14px;
+        padding: 5px 14px;
+    }
+}
+
+@media (max-width: 575px) {
+    .sign-in-button {
+        font-size: 14px;
+        padding: 4px 12px;
+        border-radius: 3px;
+    }
+}
+
+/* Language Dropdown Responsive Styles */
+@media (max-width: 991px) {
+    .nav-item.dropdown {
+        margin: 10px 0;
+        width: 100%;
+    }
+    
+    .nav-item.dropdown select.nav-link {
+        font-size: 16px;
+        padding: 6px 20px 6px 10px;
+        margin: 0 auto;
+        width: auto;
+        display: inline-block;
+    }
+    
+    .nav-item.dropdown::after {
+        right: calc(50% - 40px);
+    }
+}
+
+@media (max-width: 767px) {
+    .nav-item.dropdown select.nav-link {
+        font-size: 14px;
+        padding: 5px 18px 5px 8px;
+    }
+}
+
+@media (max-width: 575px) {
+    .nav-item.dropdown select.nav-link {
+        font-size: 14px;
+        padding: 0;
+    }
+    
+    .nav-item.dropdown::after {
+        right: calc(88% - 35px);
+    }
+}
+
+/* Fix for navbar items alignment on mobile */
+@media (max-width: 991px) {
+    
+    
+    /* Create a flex container for language and sign-in on larger mobile screens */
+    @media (min-width: 576px) and (max-width: 991px) {
+        .navbar-collapse .navbar-nav {
+            display: flex;
+            gap:30px;
+            flex-direction: row;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .navbar-collapse .nav-item.dropdown,
+        .navbar-collapse .sign-in-button {
+            width: auto;
+            margin: 10px 5px;
+        }
+    }
+}
+
+/* Extra small devices */
+@media (max-width: 480px) {
+    .sign-in-button {
+        font-size: 16px;
+        padding: 4px 10px;
+        margin: 8px 0;
+    }
+    
+    .nav-item.dropdown select.nav-link {
+        font-size: 16px;
+    }
+    
+    /* Stack language and sign-in vertically on very small screens */
+    .navbar-collapse .navbar-nav {
+        flex-direction: column;
     }
 }

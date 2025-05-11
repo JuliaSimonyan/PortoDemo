@@ -2,7 +2,7 @@
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 
-namespace Porto.Data.Migrations
+namespace Porto.Dataa.Migrations
 {
     public partial class CreateIdentitySchema : Migration
     {
