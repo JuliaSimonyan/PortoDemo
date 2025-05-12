@@ -20,6 +20,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .leaflet-touch .leaflet-control-attribution {
+            display:none;
+        }
+    </style>
 </head>
 
 <body>
@@ -53,8 +58,8 @@
                 <h2>Explore upcoming events & start connecting today!</h2>
                 <p>Whether you're new to Porto or have been here for a while, this space is for you!</p>
                 <div class="cta-buttons">
-                    <a href="#" class="btn-view-map">View Events On Map</a>
-                    <a href="#" class="btn-join-forum">Join The Community Forum</a>
+                    <a href="#map" class="btn-view-map">View Events On Map</a>
+                    <a href="#chat-connect-section" class="btn-join-forum">Join The Community Forum</a>
                 </div>
             </div>
         </div>
@@ -67,13 +72,14 @@
             <div class="map-intro text-center">
                 <p class="looking-text">Looking for something to do?</p>
                 <p>Our interactive map shows community events, workshops, and gatherings near you.<br>Find activities that match your interests and meet new people in a friendly environment.</p>
-                <a href="#" class="btn-browse-events">Browse Events</a>
+                <a href="#map" class="btn-browse-events">Browse Events</a>
 
             </div>
 
             <div class="map-container">
                 <div class="map-frame">
-                    <img src="~/Images/image (6).png" alt="Porto Community Events Map" class="events-map">
+                    <div id="map" style="height: 500px;" class="events-map"></div>
+
                 </div>
                 <div class="text-center mt-4">
                 </div>
@@ -82,7 +88,7 @@
     </section>
 
     <!-- Chat & Connect Section -->
-    <section class="chat-connect-section">
+    <section class="chat-connect-section" id="chat-connect-section">
         <div class="container">
             <h2 class="text-center">Chat & Connect</h2>
             <div class="chat-intro text-center">
@@ -149,7 +155,61 @@
         </div>
     </section>
 
-    <!-- Bootstrap JS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
+
+    <script>
+        const map = L.map('map').setView([41.1579, -8.6291], 13); 
+
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; OpenStreetMap contributors'
+        }).addTo(map);
+
+        const delay = ms => new Promise(res => setTimeout(res, ms));
+
+        async function loadEventsOnMap() {
+            try {
+                const response = await fetch('/api/MapEvents');
+                const events = await response.json();
+
+                for (const event of events) {
+                    if (!event.location) continue;
+
+                    const encodedLocation = encodeURIComponent(event.location);
+                    const geocodeUrl = `https://nominatim.openstreetmap.org/search?format=json&q=${encodedLocation}`;
+
+                    try {
+                        const geoResponse = await fetch(geocodeUrl);
+                        const geoData = await geoResponse.json();
+
+                        if (geoData.length === 0) {
+                            console.warn(`No coordinates found for: ${event.location}`);
+                            continue;
+                        }
+
+                        const { lat, lon } = geoData[0];
+                        const marker = L.marker([lat, lon]).addTo(map);
+                        marker.bindPopup(`
+                                <strong>${event.name}</strong><br/>
+                                ${event.location}<br/>
+                                ${new Date(event.startDate).toLocaleDateString()} - ${new Date(event.endDate).toLocaleDateString()}<br/>
+                                ${event.description}
+                            `);
+
+                        await delay(1000);
+                    } catch (geocodeErr) {
+                        console.error(`Failed to geocode: ${event.location}`, geocodeErr);
+                    }
+                }
+
+                map.invalidateSize();
+            } catch (err) {
+                console.error("Failed to load events:", err);
+            }
+        }
+
+        loadEventsOnMap();
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
