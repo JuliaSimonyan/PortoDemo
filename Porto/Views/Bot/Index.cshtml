@@ -1,0 +1,41 @@
+﻿@using Microsoft.AspNetCore.Identity
+@using Porto.Data.Models
+@inject UserManager<ApplicationUser> UserManager
+@{
+    ViewBag.Title = "Porto Chatbot (Ollama)";
+}
+<link href="~/css/main.css" rel="stylesheet" />
+<link href="~/css/live.css" rel="stylesheet" />
+
+<section class="hero-section live-hero">
+    <div class="hero-overlay live-overlay"></div>
+    <div class="container position-relative">
+        <partial name="_menuPartial" />
+
+<h2> Chatbot</h2>
+
+<form method="post" action="/Bot/Index">
+    <label>Select a Theme:</label>
+    <select name="theme">
+        <option value="Living">Living in Porto</option>
+        <option value="Work">Working in Porto</option>
+        <option value="Integration">Integration Help</option>
+        <option value="General">General</option>
+    </select><br /><br />
+
+    <label>Ask a Question:</label><br />
+    <input type="text" name="userMessage" required style="width: 60%;" />
+    <button type="submit">Ask</button>
+</form>
+
+@if (ViewBag.Response != null)
+{
+    <hr />
+    <p><strong>You:</strong> @ViewBag.UserMessage</p>
+    <p><strong>Bot:</strong> @ViewBag.Response</p>
+}
+
+
+
+    </div>
+</section>

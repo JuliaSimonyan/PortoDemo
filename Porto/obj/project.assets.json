@@ -8907,6 +8907,7 @@
       "Microsoft.EntityFrameworkCore.SqlServer >= 9.0.4",
       "Microsoft.EntityFrameworkCore.Tools >= 9.0.4",
       "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 8.0.7",
+      "Newtonsoft.Json >= 13.0.3",
       "Porto.App >= 1.0.0",
       "Porto.Common >= 1.0.0",
       "Porto.Data >= 1.0.0"
@@ -8994,6 +8995,10 @@
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
             "target": "Package",
             "version": "[8.0.7, )"
+          },
+          "Newtonsoft.Json": {
+            "target": "Package",
+            "version": "[13.0.3, )"
           }
         },
         "imports": [

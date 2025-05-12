@@ -1,4 +1,7 @@
-﻿@{
+﻿@using Microsoft.AspNetCore.Identity
+@inject SignInManager<Porto.Data.Models.ApplicationUser> SignInManager
+
+@{
     ViewData["Title"] = "Integrate";
     var currentCulture = Context.Request.Cookies["UserCulture"] ?? "en";
 }
@@ -129,9 +132,20 @@
                 </div>
             </div>
 
-            <div class="text-center mt-4">
-                <a href="#" class="btn-enter-forum">Enter The Forum</a>
-            </div>
+            @if (SignInManager.IsSignedIn(User))
+            {
+                <div class="text-center mt-4">
+                    <a asp-controller="Bot" asp-action="Index" class="btn-enter-forum">Enter The Forum</a>
+                </div>
+            }
+            else
+            {
+                <div class="text-center mt-4">
+                    <a class="btn-enter-forum disabled" tabindex="-1" aria-disabled="true">Enter The Forum</a>
+                    <p class="text-muted mt-2">Please <a asp-controller="Account" asp-action="Login">sign in</a> to access the forum.</p>
+                </div>
+            }
+
         </div>
     </section>
 
