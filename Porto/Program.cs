@@ -1,5 +1,7 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using Porto.App.Interfaces;
+using Porto.App.Services;
 using Porto.Data;
 using Porto.Data.Models;
 using Porto.Middleware;
@@ -11,6 +13,10 @@ var connectionString = builder.Configuration.GetConnectionString("DefaultConnect
     ?? throw new InvalidOperationException("Connection string 'DefaultConnection' not found.");
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseSqlServer(connectionString));
+builder.Services.AddDbContext<ApplicationContext>(options =>
+    options.UseSqlServer(connectionString));
+
+builder.Services.AddScoped<IEvent, EventService>();
 builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 
 // Configure Identity with roles
@@ -27,6 +33,7 @@ builder.Services.AddIdentity<ApplicationUser, IdentityRole>(options =>
 .AddDefaultTokenProviders();
 
 builder.Services.AddControllersWithViews();
+
 builder.Services.AddRazorPages(); 
 
 var app = builder.Build();

@@ -1,4 +1,6 @@
 ﻿
+using System;
+
 namespace Porto.Data.Models
 {
     public class Event
