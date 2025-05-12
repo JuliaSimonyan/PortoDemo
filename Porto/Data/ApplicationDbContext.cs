@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
-using Porto.DLL.Models;
+using Porto.Data.Models;
 
 namespace Porto.Data
 {
@@ -10,10 +10,6 @@ namespace Porto.Data
             : base(options)
         {
         }
-
-        public DbSet<ChatMessage> ChatMessages { get; set; }
-        public DbSet<Event> Events { get; set; }
-        public DbSet<BotMessage> BotMessages { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

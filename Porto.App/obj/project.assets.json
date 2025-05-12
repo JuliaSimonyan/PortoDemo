@@ -1903,7 +1903,7 @@
           "bin/placeholder/Porto.Common.dll": {}
         }
       },
-      "Porto.DLL/1.0.0": {
+      "Porto.Data/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
         "dependencies": {
@@ -1913,10 +1913,10 @@
           "Microsoft.EntityFrameworkCore.SqlServer": "8.0.15"
         },
         "compile": {
-          "bin/placeholder/Porto.DLL.dll": {}
+          "bin/placeholder/Porto.Data.dll": {}
         },
         "runtime": {
-          "bin/placeholder/Porto.DLL.dll": {}
+          "bin/placeholder/Porto.Data.dll": {}
         }
       }
     }
@@ -5396,10 +5396,10 @@
       "path": "../Porto.Common/Porto.Common.csproj",
       "msbuildProject": "../Porto.Common/Porto.Common.csproj"
     },
-    "Porto.DLL/1.0.0": {
+    "Porto.Data/1.0.0": {
       "type": "project",
-      "path": "../Porto.Data/Porto.DLL.csproj",
-      "msbuildProject": "../Porto.Data/Porto.DLL.csproj"
+      "path": "../Porto.Data/Porto.Data.csproj",
+      "msbuildProject": "../Porto.Data/Porto.Data.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -5410,7 +5410,7 @@
       "Microsoft.EntityFrameworkCore.Tools >= 9.0.4",
       "Microsoft.Extensions.Hosting.Abstractions >= 9.0.4",
       "Porto.Common >= 1.0.0",
-      "Porto.DLL >= 1.0.0"
+      "Porto.Data >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -5443,8 +5443,8 @@
             "C:\\Users\\Computer\\Desktop\\Final(Porto)\\Porto\\Porto.Common\\Porto.Common.csproj": {
               "projectPath": "C:\\Users\\Computer\\Desktop\\Final(Porto)\\Porto\\Porto.Common\\Porto.Common.csproj"
             },
-            "C:\\Users\\Computer\\Desktop\\Final(Porto)\\Porto\\Porto.Data\\Porto.DLL.csproj": {
-              "projectPath": "C:\\Users\\Computer\\Desktop\\Final(Porto)\\Porto\\Porto.Data\\Porto.DLL.csproj"
+            "C:\\Users\\Computer\\Desktop\\Final(Porto)\\Porto\\Porto.Data\\Porto.Data.csproj": {
+              "projectPath": "C:\\Users\\Computer\\Desktop\\Final(Porto)\\Porto\\Porto.Data\\Porto.Data.csproj"
             }
           }
         }

@@ -9,7 +9,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Porto.App", "..\Porto.App\P
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Porto.Common", "..\Porto.Common\Porto.Common.csproj", "{5DF05EBD-368A-46FC-BAC4-DE9468F72618}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Porto.DLL", "..\Porto.Data\Porto.DLL.csproj", "{FEB664DC-A889-43D8-A60D-5DE91B3CFCA9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Porto.Data", "..\Porto.Data\Porto.Data.csproj", "{FEB664DC-A889-43D8-A60D-5DE91B3CFCA9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

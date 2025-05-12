@@ -1,4 +1,4 @@
-﻿namespace Porto.DLL.Models
+﻿namespace Porto.Data.Models
 {
     public enum ChatTheme
     {

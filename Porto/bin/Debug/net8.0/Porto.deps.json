@@ -18,7 +18,7 @@
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": "8.0.7",
           "Porto.App": "1.0.0",
           "Porto.Common": "1.0.0",
-          "Porto.DLL": "1.0.0"
+          "Porto.Data": "1.0.0"
         },
         "runtime": {
           "Porto.dll": {}
@@ -2328,7 +2328,7 @@
           "Microsoft.EntityFrameworkCore.SqlServer": "9.0.4",
           "Microsoft.Extensions.Hosting.Abstractions": "9.0.4",
           "Porto.Common": "1.0.0",
-          "Porto.DLL": "1.0.0"
+          "Porto.Data": "1.0.0"
         },
         "runtime": {
           "Porto.App.dll": {}
@@ -2344,7 +2344,7 @@
           "Porto.Common.dll": {}
         }
       },
-      "Porto.DLL/1.0.0": {
+      "Porto.Data/1.0.0": {
         "dependencies": {
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "8.0.15",
           "Microsoft.AspNetCore.SignalR.Core": "1.2.0",
@@ -2352,7 +2352,7 @@
           "Microsoft.EntityFrameworkCore.SqlServer": "9.0.4"
         },
         "runtime": {
-          "Porto.DLL.dll": {}
+          "Porto.Data.dll": {}
         }
       }
     }
@@ -3682,7 +3682,7 @@
       "serviceable": false,
       "sha512": ""
     },
-    "Porto.DLL/1.0.0": {
+    "Porto.Data/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

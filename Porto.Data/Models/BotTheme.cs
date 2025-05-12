@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Porto.DLL.Models
+namespace Porto.Data.Models
 {
     public enum BotTheme
     {

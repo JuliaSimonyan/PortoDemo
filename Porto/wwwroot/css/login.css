@@ -83,15 +83,16 @@
 }
 
 .account-option {
+    display:flex;
     color:black;
     font-size: 13px;
     margin-bottom: 20px;
 }
 
 .create-link {
-    color: #0d3d8d;
+    color: #0d3d8d !important;
     text-decoration: none;
-    margin-left: 50px;
+    margin-left: 80px;
 }
 
 .divider {

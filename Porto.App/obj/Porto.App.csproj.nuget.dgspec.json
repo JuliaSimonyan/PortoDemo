@@ -31,8 +31,8 @@
               "C:\\Users\\Computer\\Desktop\\Final(Porto)\\Porto\\Porto.Common\\Porto.Common.csproj": {
                 "projectPath": "C:\\Users\\Computer\\Desktop\\Final(Porto)\\Porto\\Porto.Common\\Porto.Common.csproj"
               },
-              "C:\\Users\\Computer\\Desktop\\Final(Porto)\\Porto\\Porto.Data\\Porto.DLL.csproj": {
-                "projectPath": "C:\\Users\\Computer\\Desktop\\Final(Porto)\\Porto\\Porto.Data\\Porto.DLL.csproj"
+              "C:\\Users\\Computer\\Desktop\\Final(Porto)\\Porto\\Porto.Data\\Porto.Data.csproj": {
+                "projectPath": "C:\\Users\\Computer\\Desktop\\Final(Porto)\\Porto\\Porto.Data\\Porto.Data.csproj"
               }
             }
           }
@@ -165,12 +165,12 @@
         }
       }
     },
-    "C:\\Users\\Computer\\Desktop\\Final(Porto)\\Porto\\Porto.Data\\Porto.DLL.csproj": {
+    "C:\\Users\\Computer\\Desktop\\Final(Porto)\\Porto\\Porto.Data\\Porto.Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Computer\\Desktop\\Final(Porto)\\Porto\\Porto.Data\\Porto.DLL.csproj",
-        "projectName": "Porto.DLL",
-        "projectPath": "C:\\Users\\Computer\\Desktop\\Final(Porto)\\Porto\\Porto.Data\\Porto.DLL.csproj",
+        "projectUniqueName": "C:\\Users\\Computer\\Desktop\\Final(Porto)\\Porto\\Porto.Data\\Porto.Data.csproj",
+        "projectName": "Porto.Data",
+        "projectPath": "C:\\Users\\Computer\\Desktop\\Final(Porto)\\Porto\\Porto.Data\\Porto.Data.csproj",
         "packagesPath": "C:\\Users\\Computer\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\Computer\\Desktop\\Final(Porto)\\Porto\\Porto.Data\\obj\\",
         "projectStyle": "PackageReference",

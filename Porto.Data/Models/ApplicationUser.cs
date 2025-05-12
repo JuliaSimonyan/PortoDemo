@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Identity;
 
-namespace Porto.DLL.Models
+namespace Porto.Data.Models
 {
     public class ApplicationUser : IdentityUser
     {

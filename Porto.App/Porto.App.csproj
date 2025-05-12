@@ -19,7 +19,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Porto.Common\Porto.Common.csproj" />
-    <ProjectReference Include="..\Porto.Data\Porto.DLL.csproj" />
+    <ProjectReference Include="..\Porto.Data\Porto.Data.csproj" />
   </ItemGroup>
 
 </Project>

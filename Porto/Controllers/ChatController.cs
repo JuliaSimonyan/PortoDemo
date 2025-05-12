@@ -1,15 +1,15 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Porto.Data;
-using Porto.DLL.Models;
-
+using Porto.Data.Models;
+    
 namespace Porto.Controllers
 {
     public class ChatController : Controller
     {
-        private readonly ApplicationDbContext _context;
+        private readonly ApplicationContext _context;
 
-        public ChatController(ApplicationDbContext context)
+        public ChatController(ApplicationContext context)
         {
             _context = context;
         }

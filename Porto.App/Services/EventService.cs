@@ -1,20 +1,18 @@
 ﻿using Porto.App.Interfaces;
 using Porto.Common.ViewModel.Events;
 using Microsoft.EntityFrameworkCore;
-using Porto.DLL;
-using Porto;
-
+using Porto.Data.Models;    
 
 namespace Porto.App.Services
 {
-    public class EventService 
+    public class EventService : IEvent
     {
-        //private readonly ApplicationContext _context;
+        private readonly ApplicationContext _context;
 
-        //public EventService(ApplicationContext context)
-        //{
-        //    _context = context;
-        //}
+        public EventService(ApplicationContext context)
+        {
+            _context = context;
+        }
         public Task<bool> AddEvent(EventViewModel model)
         {
             throw new NotImplementedException();
@@ -26,6 +24,11 @@ namespace Porto.App.Services
         }
 
         public Task<bool> EditEvent(EventViewModel model)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<List<EventViewModel>> GetAllEvents()
         {
             throw new NotImplementedException();
         }
@@ -44,7 +47,7 @@ namespace Porto.App.Services
         //             Organizer = v.Organizer,
         //             ContactInfo = v.ContactInfo
         //         }
-                 
+
         //     ).ToList();
         //    return events;
         //}

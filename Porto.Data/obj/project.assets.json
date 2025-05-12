@@ -4518,9 +4518,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Computer\\Desktop\\Final(Porto)\\Porto\\Porto.Data\\Porto.DLL.csproj",
-      "projectName": "Porto.DLL",
-      "projectPath": "C:\\Users\\Computer\\Desktop\\Final(Porto)\\Porto\\Porto.Data\\Porto.DLL.csproj",
+      "projectUniqueName": "C:\\Users\\Computer\\Desktop\\Final(Porto)\\Porto\\Porto.Data\\Porto.Data.csproj",
+      "projectName": "Porto.Data",
+      "projectPath": "C:\\Users\\Computer\\Desktop\\Final(Porto)\\Porto\\Porto.Data\\Porto.Data.csproj",
       "packagesPath": "C:\\Users\\Computer\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\Computer\\Desktop\\Final(Porto)\\Porto\\Porto.Data\\obj\\",
       "projectStyle": "PackageReference",

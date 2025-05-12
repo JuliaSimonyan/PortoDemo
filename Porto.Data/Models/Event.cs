@@ -1,5 +1,5 @@
 ﻿
-namespace Porto.DLL.Models
+namespace Porto.Data.Models
 {
     public class Event
     {
