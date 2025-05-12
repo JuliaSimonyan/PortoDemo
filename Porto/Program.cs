@@ -4,6 +4,7 @@ using Porto.App.Interfaces;
 using Porto.App.Services;
 using Porto.Data;
 using Porto.Data.Models;
+using Porto.Hubb;
 using Porto.Middleware;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -31,6 +32,16 @@ builder.Services.AddIdentity<ApplicationUser, IdentityRole>(options =>
 })
 .AddEntityFrameworkStores<ApplicationDbContext>()
 .AddDefaultTokenProviders();
+
+builder.Services.AddHostedService<ChatCleanupService>();
+
+// SignalR
+builder.Services.AddSignalR()
+    .AddHubOptions<ChatHub>(options =>
+    {
+        options.ClientTimeoutInterval = TimeSpan.FromMinutes(1);
+    });
+
 
 builder.Services.AddControllersWithViews();
 
@@ -102,12 +113,13 @@ app.UseAuthorization();
 app.MapAreaControllerRoute(
     name: "admin",
     areaName: "Admin",
-    pattern: "Admin/{controller=Dashboard}/{action=Index}/{id?}"); // Admin area route
+    pattern: "Admin/{controller=Dashboard}/{action=Index}/{id?}");
 
-// Routing
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
-app.MapRazorPages(); // Required for Identity UI (login, register, etc.)
+app.MapRazorPages();
+app.MapHub<ChatHub>("/chathub");
+
 
 app.Run();

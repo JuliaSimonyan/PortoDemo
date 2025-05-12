@@ -1,0 +1,71 @@
+﻿@using Microsoft.AspNetCore.Identity
+@using Porto.Data.Models
+@inject UserManager<ApplicationUser> UserManager
+
+@{
+    var currentUser = await UserManager.GetUserAsync(User);
+    var currentCulture = Context.Request.Cookies["UserCulture"] ?? "en";
+
+    ViewData["Title"] = "Chat";
+}
+<link href="~/css/main.css" rel="stylesheet" />
+<link href="~/css/live.css" rel="stylesheet" />
+
+<section class="hero-section live-hero">
+    <div class="hero-overlay live-overlay"></div>
+    <div class="container position-relative">
+<partial name="_menuPartial" />
+
+<h2>Group Chat</h2>
+
+<div id="chatWindow" style="height:300px; overflow-y:auto; border:1px solid #ccc; padding:10px;">
+    @foreach (var msg in Model)
+    {
+        <div><strong>@msg.User.UserName:</strong> @msg.Message</div>
+    }
+</div>
+
+<input type="text" id="messageInput" class="form-control mt-2" placeholder="Type a message..." />
+<button id="sendButton" class="btn btn-primary mt-2">Send</button>
+</div>
+</section>
+
+@section Scripts {
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/microsoft-signalr/7.0.5/signalr.min.js"></script>
+    <script>
+        const userId = "@currentUser.Id";
+
+        const connection = new signalR.HubConnectionBuilder()
+            .withUrl("/chathub")
+            .build();
+
+        connection.on("ReceiveMessage", (user, message) => {
+            const div = document.createElement("div");
+            div.innerHTML = `<strong>${user}:</strong> ${message}`;
+            document.getElementById("chatWindow").appendChild(div);
+        });
+
+        connection.start().catch(err => console.error(err.toString()));
+
+        const sendMessage = () => {
+            const msg = document.getElementById("messageInput").value;
+            if (msg.trim() !== "") {
+                connection.invoke("SendMessage", userId, msg).catch(err => console.error(err.toString()));
+                document.getElementById("messageInput").value = "";
+            }
+        };
+
+        // Trigger message sending via the "Send" button
+        document.getElementById("sendButton").addEventListener("click", sendMessage);
+
+        // Trigger message sending when the Enter key is pressed
+        document.getElementById("messageInput").addEventListener("keydown", function (event) {
+            if (event.key === "Enter") {
+                event.preventDefault();  // Prevent form submission (if in a form)
+                sendMessage();
+            }
+        });
+    </script>
+}
+
+
