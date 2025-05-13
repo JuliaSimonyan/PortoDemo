@@ -14,13 +14,13 @@
     <title>Campana - Everything You Need to Live, Work & Belong</title>
     <link href="~/css/main.css" rel="stylesheet" />
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
     <!-- Custom CSS -->
     <link rel="stylesheet" href="styles.css">
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
 </head>
 
 <body>
@@ -60,7 +60,7 @@
                         a European initiative dedicated to fostering inclusive digital
                         transformation in urban areas. By connecting technology providers,
                         local governments, and communities, CommuniCity creates smart,
-                        people-centered solutions that improve urban living. 
+                        people-centered solutions that improve urban living.
                     </p><br>
                     <p>
                         The project’s implementation has been supported by Porto Digital, driving digital
@@ -165,29 +165,37 @@
         <div class="container">
             <div class="contact-card">
                 <div class="row">
+
+
                     <div class="col-lg-7 contact-form-col">
-                        <h2>Contact US</h2>
-                        <p class="contact-subtitle">How can we help you?</p>
+                        <form asp-action="ContactUs" asp-controller="Home" method="post">
+                            <h2>@AppRes.ContactUsSubject</h2>
+                            <p class="contact-subtitle">@AppRes.ContactUsSectionText</p>
 
-                        <div class="contact-options">
-                            <div class="option-btn active">
-                                <div>I'm an individual user</div>
-                                <div class="option-subtitle">looking for support or information</div>
+                            <!-- Custom select group -->
+                            <div class="contact-options">
+                                <div class="option-btn active" data-value="@AppRes.IndividualUser">
+                                    <div>@(AppRes.IndividualUser ?? "I'm an individual user")</div>
+                                    <div class="option-subtitle">@(AppRes.IndividualUserText ?? "looking for support or information")</div>
+                                </div>
+                                <div class="option-btn" data-value="@AppRes.EventOrganizer">
+                                    <div>@(AppRes.EventOrganizer ?? "I'm an event organizer")</div>
+                                    <div class="option-subtitle">@(AppRes.EventOrganizerText ?? "wanting to share an opportunity")</div>
+                                </div>
                             </div>
-                            <div class="option-btn">
-                                <div>I'm an event organizer</div>
-                                <div class="option-subtitle">wanting to share an opportunity</div>
-                            </div>
-                        </div>
 
-                        <form>
+                            <!-- Hidden input to simulate a <select> -->
+                            <input type="hidden" name="userType" id="UserType" value="Individual" />
+
+
                             <div class="mb-3">
-                                <input type="email" class="form-control" placeholder="Your Email">
+                                <input name="email" type="email" class="form-control" placeholder="Your Email" required>
                             </div>
                             <div class="mb-3">
-                                <textarea class="form-control" rows="5" placeholder="Message"></textarea>
+                                <textarea name="message" class="form-control" rows="5" placeholder="Message" required></textarea>
                             </div>
                             <button type="submit" class="btn btn-primary submit-btn">Submit</button>
+
                         </form>
                     </div>
                     <div class="col-lg-5 contact-image-col">
@@ -198,10 +206,20 @@
         </div>
     </section>
     <!-- Footer -->
-    
-
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        document.querySelectorAll('.option-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                document.querySelectorAll('.option-btn').forEach(b => b.classList.remove('active'));
+
+                btn.classList.add('active');
+
+                document.getElementById('UserType').value = btn.getAttribute('data-value');
+            });
+        });
+    </script>
 </body>
 
 </html>

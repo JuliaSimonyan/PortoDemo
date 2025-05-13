@@ -70,6 +70,51 @@ namespace Porto.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to How can we help you?.
+        /// </summary>
+        internal static string ContactUsSectionText {
+            get {
+                return ResourceManager.GetString("ContactUsSectionText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Contact Us.
+        /// </summary>
+        internal static string ContactUsSubject {
+            get {
+                return ResourceManager.GetString("ContactUsSubject", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Email.
+        /// </summary>
+        internal static string Email {
+            get {
+                return ResourceManager.GetString("Email", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to I&apos;m an event organizer.
+        /// </summary>
+        internal static string EventOrganizer {
+            get {
+                return ResourceManager.GetString("EventOrganizer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to wanting to share an opportunity.
+        /// </summary>
+        internal static string EventOrganizerText {
+            get {
+                return ResourceManager.GetString("EventOrganizerText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Hello.
         /// </summary>
         internal static string Hello {
@@ -88,6 +133,24 @@ namespace Porto.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to I&apos;m an individual user.
+        /// </summary>
+        internal static string IndividualUser {
+            get {
+                return ResourceManager.GetString("IndividualUser", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to looking for support or information.
+        /// </summary>
+        internal static string IndividualUserText {
+            get {
+                return ResourceManager.GetString("IndividualUserText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Integrate.
         /// </summary>
         internal static string Integrate {
@@ -102,6 +165,24 @@ namespace Porto.Resources {
         internal static string Live {
             get {
                 return ResourceManager.GetString("Live", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Message Content.
+        /// </summary>
+        internal static string MessageContent {
+            get {
+                return ResourceManager.GetString("MessageContent", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to User Type.
+        /// </summary>
+        internal static string UserType {
+            get {
+                return ResourceManager.GetString("UserType", resourceCulture);
             }
         }
         

@@ -120,16 +120,43 @@
   <data name="Contact" xml:space="preserve">
     <value />
   </data>
+  <data name="ContactUsSectionText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ContactUsSubject" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Email" xml:space="preserve">
+    <value />
+  </data>
+  <data name="EventOrganizer" xml:space="preserve">
+    <value />
+  </data>
+  <data name="EventOrganizerText" xml:space="preserve">
+    <value />
+  </data>
   <data name="Hello" xml:space="preserve">
     <value>Բարև</value>
   </data>
   <data name="Home" xml:space="preserve">
     <value />
   </data>
+  <data name="IndividualUser" xml:space="preserve">
+    <value />
+  </data>
+  <data name="IndividualUserText" xml:space="preserve">
+    <value />
+  </data>
   <data name="Integrate" xml:space="preserve">
     <value />
   </data>
   <data name="Live" xml:space="preserve">
+    <value />
+  </data>
+  <data name="MessageContent" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UserType" xml:space="preserve">
     <value />
   </data>
   <data name="Work" xml:space="preserve">
