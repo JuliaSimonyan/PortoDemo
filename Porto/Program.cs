@@ -17,10 +17,6 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
 builder.Services.AddDbContext<ApplicationContext>(options =>
     options.UseSqlServer(connectionString));
 
-builder.Services.AddScoped<IEvent, EventService>();
-builder.Services.AddDatabaseDeveloperPageExceptionFilter();
-
-// Configure Identity with roles
 builder.Services.AddIdentity<ApplicationUser, IdentityRole>(options =>
 {
     options.SignIn.RequireConfirmedAccount = false;
@@ -33,6 +29,8 @@ builder.Services.AddIdentity<ApplicationUser, IdentityRole>(options =>
 .AddEntityFrameworkStores<ApplicationDbContext>()
 .AddDefaultTokenProviders();
 
+builder.Services.AddScoped<IEvent, EventService>();
+builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 builder.Services.AddHostedService<ChatCleanupService>();
 
 // SignalR
@@ -42,13 +40,15 @@ builder.Services.AddSignalR()
         options.ClientTimeoutInterval = TimeSpan.FromMinutes(1);
     });
 
+builder.Services.AddAuthentication(IdentityConstants.ApplicationScheme)
+    .AddCookie();
 
 builder.Services.AddControllersWithViews();
-
-builder.Services.AddRazorPages(); 
+builder.Services.AddRazorPages();
 
 var app = builder.Build();
 
+// Seed Admin User
 using (var scope = app.Services.CreateScope())
 {
     var services = scope.ServiceProvider;
@@ -58,13 +58,11 @@ using (var scope = app.Services.CreateScope())
     var adminEmail = "admin@example.com";
     var adminPassword = "Admin123!";
 
-    // 1. Create Admin role if not exists
     if (!await roleManager.RoleExistsAsync("Admin"))
     {
         await roleManager.CreateAsync(new IdentityRole("Admin"));
     }
 
-    // 2. Create admin user if not exists
     var adminUser = await userManager.FindByEmailAsync(adminEmail);
     if (adminUser == null)
     {
@@ -74,6 +72,7 @@ using (var scope = app.Services.CreateScope())
             Email = adminEmail,
             EmailConfirmed = true
         };
+
         var result = await userManager.CreateAsync(adminUser, adminPassword);
         if (result.Succeeded)
         {
@@ -106,10 +105,10 @@ var localizationOptions = new RequestLocalizationOptions()
 app.UseRequestLocalization(localizationOptions);
 app.UseMiddleware<LocalizationMiddleware>();
 
-// Identity
 app.UseAuthentication();
 app.UseAuthorization();
 
+// Route config
 app.MapAreaControllerRoute(
     name: "admin",
     areaName: "Admin",
@@ -118,8 +117,8 @@ app.MapAreaControllerRoute(
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
-app.MapRazorPages();
-app.MapHub<ChatHub>("/chathub");
 
+app.MapRazorPages(); // ✅ Identity scaffolding (login/register) uses this
+app.MapHub<ChatHub>("/chathub");
 
 app.Run();

@@ -1,4 +1,7 @@
-﻿@{
+﻿@using Microsoft.AspNetCore.Identity
+@inject SignInManager<Porto.Data.Models.ApplicationUser> SignInManager
+
+@{
     ViewData["Title"] = "Work";
     var currentCulture = Context.Request.Cookies["UserCulture"] ?? "en";
 }
@@ -92,11 +95,23 @@
                     </button>
                 </div>
             </div>
-
+            @if (SignInManager.IsSignedIn(User))
+            {
             <div class="chat-cta text-center">
                 <p>Ask any job-related question and get instant support!</p>
-                <a href="#" class="chat-assistant-btn">Chat With AI Career Assistant</a>
+                <a asp-controller="Bot" asp-action="Index" class="chat-assistant-btn">Chat With AI Career Assistant</a>
             </div>
+
+            }
+            else
+            {
+                <div class="chat-cta text-center">
+                    <button class="chat-assistant-btn" disabled>Chat With AI Career Assistant</button>
+                    <div class="chat-access-warning">
+                        <span>Please <a asp-area="Identity" asp-page="/Account/Login">sign in</a> to access the chat.</span>
+                    </div>
+                </div>
+            }
         </div>
     </section>
 

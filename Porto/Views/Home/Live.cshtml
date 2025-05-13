@@ -177,21 +177,10 @@
                 </div>
             </div>
 
-            @if (SignInManager.IsSignedIn(User))
-            {
                 <div class="chat-button-container">
-                    <a asp-controller="Bot" asp-action="Index" class="btn start-chat-btn">Start Chatting</a>
+                    <a asp-controller="StaticChatBot" asp-action="Index" class="btn start-chat-btn">Start Chatting</a>
                 </div>
-            }
-            else
-            {
-                <div class="chat-button-container">
-                    <button class="btn start-chat-btn" disabled>Start Chatting</button>
-                    <div class="chat-access-warning">
-                        <span>Please <a asp-controller="Account" asp-action="Login">sign in</a> to access the chat.</span>
-                    </div>
-                </div>
-            }
+            
 
         </div>
     </section>

@@ -18,7 +18,7 @@ namespace Porto.Controllers
         public async Task<IActionResult> Logout()
         {
             await _signInManager.SignOutAsync();
-            return RedirectToAction("Index", "Home"); // Or wherever you want
+            return RedirectToAction("Index", "Home");
         }
     }
 }
