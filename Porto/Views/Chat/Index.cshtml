@@ -7,42 +7,152 @@
     var currentCulture = Context.Request.Cookies["UserCulture"] ?? "en";
 
     ViewData["Title"] = "Chat";
+    var userId = currentUser?.Id ?? "";
+    var userName = currentUser?.UserName ?? "Anonymous";
+    var firstChar = userName.Length > 0 ? userName[0] : 'a';
+    var userColor = GetColorForLetter(firstChar);
 }
+
+@functions {
+    public string GetColorForLetter(char letter)
+    {
+        var colors = new Dictionary<char, string>
+            {
+                ['a'] = "#4a90e2",
+                ['b'] = "#50a7e0",
+                ['c'] = "#56b0dd",
+                ['d'] = "#5cb9db",
+                ['e'] = "#62c2d8",
+                ['f'] = "#68cad6",
+                ['g'] = "#6ed3d3",
+                ['h'] = "#74dcd1",
+                ['i'] = "#7ae5ce",
+                ['j'] = "#80edcc",
+                ['k'] = "#86f6c9",
+                ['l'] = "#8cffc7",
+                ['m'] = "#92f0d4",
+                ['n'] = "#98e0e0",
+                ['o'] = "#9ed1ed",
+                ['p'] = "#a4c1fa",
+                ['q'] = "#aab2f6",
+                ['r'] = "#b0a2f3",
+                ['s'] = "#b693f0",
+                ['t'] = "#bc83ec",
+                ['u'] = "#c274e9",
+                ['v'] = "#c865e6",
+                ['w'] = "#ce55e2",
+                ['x'] = "#d446df",
+                ['y'] = "#da36db",
+                ['z'] = "#e027d8"
+            };
+
+        letter = char.ToLower(letter);
+        return colors.ContainsKey(letter) ? colors[letter] : "#4a90e2";
+    }
+}
+
 <link href="~/css/main.css" rel="stylesheet" />
 <link href="~/css/live.css" rel="stylesheet" />
+<link href="~/css/chat.css" rel="stylesheet" />
+
 
 <section class="hero-section live-hero">
     <div class="hero-overlay live-overlay"></div>
     <div class="container position-relative">
-<partial name="_menuPartial" />
+        <partial name="_menuPartial" />
+        <div class="app-container">
 
-<h2>Group Chat</h2>
+            <!-- Sidebar -->
+            <div class="sidebar">
+                <!-- Channels Sidebar Card -->
+                <div class="sidebar-card">
+                    <div class="sidebar-item active"><div class="sidebar-icon"><img src="~/Images/Integrate/Frame.png"></div><div class="sidebar-content"><div class="sidebar-label">General</div><div class="sidebar-count">36,012 Posts</div></div></div>
+                    <div class="sidebar-item"><div class="sidebar-icon"><img src="~/Images/Integrate/Frame (1).png"></div><div class="sidebar-content"><div class="sidebar-label">Live</div><div class="sidebar-count">24,513 Posts</div></div></div>
+                    <div class="sidebar-item"><div class="sidebar-icon"><img src="~/Images/Integrate/Frame (2).png"></div><div class="sidebar-content"><div class="sidebar-label">Work</div><div class="sidebar-count">15,623 Posts</div></div></div>
+                    <div class="sidebar-item"><div class="sidebar-icon"><img src="~/Images/Integrate/Frame (3).png"></div><div class="sidebar-content"><div class="sidebar-label">Integrate</div><div class="sidebar-count">11,784 Posts</div></div></div>
+                </div>
 
-<div id="chatWindow" style="height:300px; overflow-y:auto; border:1px solid #ccc; padding:10px;">
-    @foreach (var msg in Model)
-    {
-        <div><strong>@msg.User.UserName:</strong> @msg.Message</div>
-    }
-</div>
+               
+            </div>
 
-<input type="text" id="messageInput" class="form-control mt-2" placeholder="Type a message..." />
-<button id="sendButton" class="btn btn-primary mt-2">Send</button>
-</div>
+            <!-- Main Content -->
+            <div class="main-content">
+                <div class="post-input-card">
+                    <div class="avatar-circle" style="background-color:@userColor;">@firstChar</div>
+                    <input type="text" id="messageInput" placeholder="Let's share what's going on your mind..." class="form-control mt-2 post-input" />
+                    <button id="sendButton" class="post-button">Create Post</button>
+                </div>
+
+                <div class="chat-window" id="chatWindow">
+                    @foreach (var msg in Model)
+                    {
+                        var firstLetter = msg.User.UserName.Length > 0 ? msg.User.UserName[0] : 'a';
+                        var color = GetColorForLetter(firstLetter);
+                        <div class="message-card">
+                            <div class="message-header">
+                                <div class="avatar-circle" style="background-color:@color;">@firstLetter</div>
+                                <div class="user-info">
+                                    <div class="username">@msg.User.UserName</div>
+                                    <div class="timestamp">@DateTime.Now.ToString("g")</div>
+                                </div>
+                            </div>
+                            <div class="message-content">
+                                <p>@msg.Message</p>
+                            </div>
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
 </section>
 
 @section Scripts {
     <script src="https://cdnjs.cloudflare.com/ajax/libs/microsoft-signalr/7.0.5/signalr.min.js"></script>
     <script>
-        const userId = "@currentUser.Id";
+        const userId = "@userId";
+        const userName = "@userName";
 
-        const connection = new signalR.HubConnectionBuilder()
-            .withUrl("/chathub")
-            .build();
+        function getColorForLetter(letter) {
+            const colors = {
+                a: "#4a90e2", b: "#50a7e0", c: "#56b0dd", d: "#5cb9db", e: "#62c2d8",
+                f: "#68cad6", g: "#6ed3d3", h: "#74dcd1", i: "#7ae5ce", j: "#80edcc",
+                k: "#86f6c9", l: "#8cffc7", m: "#92f0d4", n: "#98e0e0", o: "#9ed1ed",
+                p: "#a4c1fa", q: "#aab2f6", r: "#b0a2f3", s: "#b693f0", t: "#bc83ec",
+                u: "#c274e9", v: "#c865e6", w: "#ce55e2", x: "#d446df", y: "#da36db",
+                z: "#e027d8"
+            };
+            const lower = letter.toLowerCase();
+            return colors[lower] || "#4a90e2";
+        }
+
+        const connection = new signalR.HubConnectionBuilder().withUrl("/chathub").build();
 
         connection.on("ReceiveMessage", (user, message) => {
+            const firstLetter = user.charAt(0);
+            const color = getColorForLetter(firstLetter);
+
             const div = document.createElement("div");
-            div.innerHTML = `<strong>${user}:</strong> ${message}`;
-            document.getElementById("chatWindow").appendChild(div);
+            div.className = "message-card";
+            const now = new Date();
+            const timestamp = now.toLocaleString();
+
+            div.innerHTML = `
+                        <div class="message-header">
+                            <div class="avatar-circle" style="background-color:${color};">${firstLetter}</div>
+                            <div class="user-info">
+                                <div class="username">${user}</div>
+                                <div class="timestamp">${timestamp}</div>
+                            </div>
+                        </div>
+                        <div class="message-content">
+                            <p>${message}</p>
+                        </div>
+                    `;
+
+            const chatWindow = document.getElementById("chatWindow");
+            chatWindow.appendChild(div);
+            chatWindow.scrollTop = chatWindow.scrollHeight;
         });
 
         connection.start().catch(err => console.error(err.toString()));
@@ -55,17 +165,12 @@
             }
         };
 
-        // Trigger message sending via the "Send" button
         document.getElementById("sendButton").addEventListener("click", sendMessage);
-
-        // Trigger message sending when the Enter key is pressed
         document.getElementById("messageInput").addEventListener("keydown", function (event) {
             if (event.key === "Enter") {
-                event.preventDefault();  // Prevent form submission (if in a form)
+                event.preventDefault();
                 sendMessage();
             }
         });
     </script>
 }
-
-

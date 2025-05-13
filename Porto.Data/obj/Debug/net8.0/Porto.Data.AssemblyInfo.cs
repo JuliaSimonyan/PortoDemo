@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Porto.Data")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+aa790d75049ebbeeb18509fd421d51bf879273c8")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a61a93126d901d310c3305f204e487a02ef91dd5")]
 [assembly: System.Reflection.AssemblyProductAttribute("Porto.Data")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Porto.Data")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
