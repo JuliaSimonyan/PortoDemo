@@ -4,13 +4,12 @@
 
 @{
     var currentUser = await UserManager.GetUserAsync(User);
-    var currentCulture = Context.Request.Cookies["UserCulture"] ?? "en";
-
-    ViewData["Title"] = "Chat";
     var userId = currentUser?.Id ?? "";
     var userName = currentUser?.UserName ?? "Anonymous";
     var firstChar = userName.Length > 0 ? userName[0] : 'a';
     var userColor = GetColorForLetter(firstChar);
+
+    ViewData["Title"] = "Chat";
 }
 
 @functions {
@@ -50,29 +49,40 @@
         return colors.ContainsKey(letter) ? colors[letter] : "#4a90e2";
     }
 }
-
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 <link href="~/css/main.css" rel="stylesheet" />
 <link href="~/css/live.css" rel="stylesheet" />
 <link href="~/css/chat.css" rel="stylesheet" />
-
 
 <section class="hero-section live-hero">
     <div class="hero-overlay live-overlay"></div>
     <div class="container position-relative">
         <partial name="_menuPartial" />
         <div class="app-container">
-
             <!-- Sidebar -->
             <div class="sidebar">
-                <!-- Channels Sidebar Card -->
                 <div class="sidebar-card">
-                    <div class="sidebar-item active"><div class="sidebar-icon"><img src="~/Images/Integrate/Frame.png"></div><div class="sidebar-content"><div class="sidebar-label">General</div><div class="sidebar-count">36,012 Posts</div></div></div>
-                    <div class="sidebar-item"><div class="sidebar-icon"><img src="~/Images/Integrate/Frame (1).png"></div><div class="sidebar-content"><div class="sidebar-label">Live</div><div class="sidebar-count">24,513 Posts</div></div></div>
-                    <div class="sidebar-item"><div class="sidebar-icon"><img src="~/Images/Integrate/Frame (2).png"></div><div class="sidebar-content"><div class="sidebar-label">Work</div><div class="sidebar-count">15,623 Posts</div></div></div>
-                    <div class="sidebar-item"><div class="sidebar-icon"><img src="~/Images/Integrate/Frame (3).png"></div><div class="sidebar-content"><div class="sidebar-label">Integrate</div><div class="sidebar-count">11,784 Posts</div></div></div>
+                    <div class="sidebar-item active" onclick="setActive(this)">
+                        <div class="sidebar-icon"><img src="~/Images/Integrate/Frame.png"></div>
+                        <div class="sidebar-content"><div class="sidebar-label">General</div>
+                    </div>
+                    </div>
+                    <div class="sidebar-item" onclick="setActive(this)">
+                        <div class="sidebar-icon"><img src="~/Images/Integrate/Frame (1).png"></div>
+                    <div class="sidebar-content"><div class="sidebar-label">Live</div>
                 </div>
-
-               
+                    </div>
+                    <div class="sidebar-item" onclick="setActive(this)">
+                        <div class="sidebar-icon"><img src="~/Images/Integrate/Frame (2).png"></div>
+                <div class="sidebar-content"><div class="sidebar-label">Work</div>
+            </div>
+                    </div>
+                    <div class="sidebar-item" onclick="setActive(this)">
+                        <div class="sidebar-icon"><img src="~/Images/Integrate/Frame (3).png"></div>
+                        <div class="sidebar-content"><div class="sidebar-label">Integrate</div>
+                    </div>
+                    </div>
+                </div>
             </div>
 
             <!-- Main Content -->
@@ -83,25 +93,7 @@
                     <button id="sendButton" class="post-button">Create Post</button>
                 </div>
 
-                <div class="chat-window" id="chatWindow">
-                    @foreach (var msg in Model)
-                    {
-                        var firstLetter = msg.User.UserName.Length > 0 ? msg.User.UserName[0] : 'a';
-                        var color = GetColorForLetter(firstLetter);
-                        <div class="message-card">
-                            <div class="message-header">
-                                <div class="avatar-circle" style="background-color:@color;">@firstLetter</div>
-                                <div class="user-info">
-                                    <div class="username">@msg.User.UserName</div>
-                                    <div class="timestamp">@DateTime.Now.ToString("g")</div>
-                                </div>
-                            </div>
-                            <div class="message-content">
-                                <p>@msg.Message</p>
-                            </div>
-                        </div>
-                    }
-                </div>
+                <div class="chat-window" id="chatWindow"></div>
             </div>
         </div>
     </div>
@@ -112,6 +104,7 @@
     <script>
         const userId = "@userId";
         const userName = "@userName";
+        let currentGroup = "General";
 
         function getColorForLetter(letter) {
             const colors = {
@@ -122,20 +115,61 @@
                 u: "#c274e9", v: "#c865e6", w: "#ce55e2", x: "#d446df", y: "#da36db",
                 z: "#e027d8"
             };
-            const lower = letter.toLowerCase();
-            return colors[lower] || "#4a90e2";
+            return colors[letter.toLowerCase()] || "#4a90e2";
         }
 
         const connection = new signalR.HubConnectionBuilder().withUrl("/chathub").build();
 
-        connection.on("ReceiveMessage", (user, message) => {
+        connection.on("ReceiveMessage", (user, message, timestamp) => {
+            console.log("Received:", user, message, timestamp);
+            renderMessage(user, message, timestamp);
+        });
+
+        connection.start().then(() => {
+            console.log("Connected to SignalR");
+            connection.invoke("JoinGroup", currentGroup).then(() => {
+                console.log("Joined group:", currentGroup);
+                loadMessages(currentGroup);
+            });
+        }).catch(err => console.error(err.toString()));
+
+        function sendMessage() {
+            const msg = document.getElementById("messageInput").value;
+            if (msg.trim() !== "") {
+                connection.invoke("SendMessage", msg, currentGroup)
+                    .catch(err => console.error("Send error:", err.toString()));
+                document.getElementById("messageInput").value = "";
+            }
+        }
+
+
+        function joinGroup(groupName) {
+            if (groupName === currentGroup) return;
+
+            connection.invoke("LeaveGroup", currentGroup).then(() => {
+                currentGroup = groupName;
+                document.getElementById("chatWindow").innerHTML = "";
+                connection.invoke("JoinGroup", currentGroup).then(() => {
+                    loadMessages(currentGroup);
+                });
+            }).catch(err => console.error(err.toString()));
+        }
+
+        function loadMessages(groupName) {
+            connection.invoke("GetGroupMessages", groupName).then(messages => {
+                messages.forEach(msg => {
+                    renderMessage(msg.userName, msg.message, msg.timestamp);
+                });
+            });
+        }
+
+        function renderMessage(user, message, timestamp) {
+            const chatWindow = document.getElementById("chatWindow");
+
             const firstLetter = user.charAt(0);
             const color = getColorForLetter(firstLetter);
-
             const div = document.createElement("div");
             div.className = "message-card";
-            const now = new Date();
-            const timestamp = now.toLocaleString();
 
             div.innerHTML = `
                         <div class="message-header">
@@ -149,21 +183,9 @@
                             <p>${message}</p>
                         </div>
                     `;
-
-            const chatWindow = document.getElementById("chatWindow");
             chatWindow.appendChild(div);
             chatWindow.scrollTop = chatWindow.scrollHeight;
-        });
-
-        connection.start().catch(err => console.error(err.toString()));
-
-        const sendMessage = () => {
-            const msg = document.getElementById("messageInput").value;
-            if (msg.trim() !== "") {
-                connection.invoke("SendMessage", userId, msg).catch(err => console.error(err.toString()));
-                document.getElementById("messageInput").value = "";
-            }
-        };
+        }
 
         document.getElementById("sendButton").addEventListener("click", sendMessage);
         document.getElementById("messageInput").addEventListener("keydown", function (event) {
@@ -172,5 +194,23 @@
                 sendMessage();
             }
         });
+
+        // Group change via sidebar click
+        document.querySelectorAll(".sidebar-item").forEach(item => {
+            item.addEventListener("click", () => {
+                const groupName = item.querySelector(".sidebar-label").innerText.trim();
+                joinGroup(groupName);
+            });
+        });
+
+        function setActive(element) {
+            // Remove active class from all items
+            const items = document.querySelectorAll('.sidebar-item');
+            items.forEach(item => item.classList.remove('active'));
+
+            // Add active class to the clicked item
+            element.classList.add('active');
+        }
+
     </script>
 }

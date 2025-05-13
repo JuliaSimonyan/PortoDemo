@@ -9,6 +9,7 @@ namespace Porto.Data.Models
         public string UserId { get; set; }
         public string Message { get; set; }
         public DateTime Timestamp { get; set; }
+        public string GroupName { get; set; }
 
         [ForeignKey("UserId")]
         public ApplicationUser User { get; set; }
