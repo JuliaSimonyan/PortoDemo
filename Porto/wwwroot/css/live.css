@@ -300,8 +300,9 @@
     .chatbot-card {
         padding: 16px;
     }
-    
+
     .start-chat-btn {
+        width: 80% !important;
         padding: 12px 30px;
         font-size: 15px;
     }

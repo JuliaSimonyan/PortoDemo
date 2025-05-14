@@ -1,4 +1,3 @@
-// Chatbot data structure with all categories, subcategories, and QA pairs
 const chatbotData = {
     live: {
         name: {
@@ -800,7 +799,7 @@ const chatbotData = {
         ]
     }
 };
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     // Current language (default: English)
     let currentLanguage = 'en';
 
@@ -815,21 +814,21 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Add click event listeners to each category item
     categoryItems.forEach(item => {
-        item.addEventListener('click', function() {
+        item.addEventListener('click', function () {
             // Remove active class from all category items
             categoryItems.forEach(cat => cat.classList.remove('active'));
-            
+
             // Add active class to clicked item
             this.classList.add('active');
-            
+
             // Get the category from data attribute
             const category = this.getAttribute('data-category');
             currentCategory = category;
             currentSubcategory = null;
-            
+
             // Show subcategories for this category
             showSubcategories(category);
-            
+
             // Clear chat messages
             chatMessagesDiv.innerHTML = '';
         });
@@ -839,15 +838,15 @@ document.addEventListener('DOMContentLoaded', function() {
     function showSubcategories(category) {
         const categoryData = chatbotData[category];
         if (!categoryData) return;
-        
+
         const lang = currentLanguage;
-        
+
         let html = `
             <p>Let's find the right educational support for you.</p>
             <p>Are you looking for:</p>
             <div class="response-options">
         `;
-        
+
         categoryData.subcategories.forEach(subcategory => {
             html += `
                 <div class="response-option" data-subcategory="${subcategory.id}">
@@ -856,15 +855,15 @@ document.addEventListener('DOMContentLoaded', function() {
                 </div>
             `;
         });
-        
+
         html += `</div>`;
-        
+
         subcategoriesDiv.innerHTML = html;
-        
+
         // Add click event listeners to subcategory items
         const subcategoryItems = document.querySelectorAll('.response-option');
         subcategoryItems.forEach(item => {
-            item.addEventListener('click', function() {
+            item.addEventListener('click', function () {
                 const subcategoryId = this.getAttribute('data-subcategory');
                 currentSubcategory = subcategoryId;
                 showQuestions(category, subcategoryId);
@@ -876,12 +875,12 @@ document.addEventListener('DOMContentLoaded', function() {
     function showQuestions(category, subcategoryId) {
         const categoryData = chatbotData[category];
         if (!categoryData) return;
-        
+
         const subcategory = categoryData.subcategories.find(sub => sub.id === subcategoryId);
         if (!subcategory) return;
-        
+
         const lang = currentLanguage;
-        
+
         let html = `
             <button class="back-button" onclick="backToSubcategories()">
                 <i class="fas fa-arrow-left"></i> Back
@@ -890,7 +889,7 @@ document.addEventListener('DOMContentLoaded', function() {
             <p>Select a question:</p>
             <div class="questions-list">
         `;
-        
+
         subcategory.questions.forEach(question => {
             html += `
                 <div class="question-item" data-question="${question.id}">
@@ -898,15 +897,15 @@ document.addEventListener('DOMContentLoaded', function() {
                 </div>
             `;
         });
-        
+
         html += `</div>`;
-        
+
         subcategoriesDiv.innerHTML = html;
-        
+
         // Add click event listeners to question items
         const questionItems = document.querySelectorAll('.question-item');
         questionItems.forEach(item => {
-            item.addEventListener('click', function() {
+            item.addEventListener('click', function () {
                 const questionId = this.getAttribute('data-question');
                 showAnswer(category, subcategoryId, questionId);
             });
@@ -915,7 +914,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Function to show answer for a selected question
     function showAnswer(category, subcategoryId, questionId) {
-        console.log("Showing answer for:", category, subcategoryId, questionId);
 
         const categoryData = chatbotData[category];
         if (!categoryData) return;
@@ -925,58 +923,60 @@ document.addEventListener('DOMContentLoaded', function() {
 
         const question = subcategory.questions.find(q => q.id === questionId);
         if (!question) {
-            console.error("Question not found:", questionId);
             return;
         }
 
-        console.log("Found question:", question);
 
         const lang = currentLanguage;
 
-        // Add user message
         addMessage('user', question.question[lang]);
 
-        // Add typing indicator
         addTypingIndicator();
 
-        // After 3 seconds, remove typing indicator and show the answer
         setTimeout(() => {
             removeTypingIndicator();
             addMessage('bot', question.answer[lang]);
         }, 3000);
     }
+
     // Function to add a message to the chat
     function addMessage(role, content) {
         const messageDiv = document.createElement('div');
         messageDiv.className = `message ${role}-message`;
         messageDiv.textContent = content;
-        
+
         chatMessagesDiv.appendChild(messageDiv);
-        
+
         // Scroll to the bottom of the chat
         chatMessagesDiv.scrollTop = chatMessagesDiv.scrollHeight;
     }
 
     // Function to go back to subcategories
-    window.backToSubcategories = function() {
+    window.backToSubcategories = function () {
         if (currentCategory) {
             showSubcategories(currentCategory);
         }
     };
 
-    // Function to change language
-    window.changeLanguage = function(lang) {
-        currentLanguage = lang;
-        
-        // Update UI based on current state
-        if (currentCategory) {
-            if (currentSubcategory) {
-                showQuestions(currentCategory, currentSubcategory);
-            } else {
-                showSubcategories(currentCategory);
-            }
+    // Function to add typing indicator
+    function addTypingIndicator() {
+        const typingDiv = document.createElement('div');
+        typingDiv.className = 'message bot-message typing-indicator';
+        typingDiv.innerHTML = '<span></span><span></span><span></span>'; // Typing dots
+
+        chatMessagesDiv.appendChild(typingDiv);
+
+        // Scroll to the bottom of the chat
+        chatMessagesDiv.scrollTop = chatMessagesDiv.scrollHeight;
+    }
+
+    // Function to remove typing indicator
+    function removeTypingIndicator() {
+        const typingDiv = document.querySelector('.typing-indicator');
+        if (typingDiv) {
+            typingDiv.remove();
         }
-    };
+    }
 
     // Set Live as the default selected category
     const liveCategory = document.querySelector('[data-category="live"]');
