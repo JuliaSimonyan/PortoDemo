@@ -1,0 +1,106 @@
+﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+@{
+    ViewData["Title"] = "Chatbot Page";
+    var currentCulture = Context.Request.Cookies["UserCulture"] ?? "en";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campanha Chatbot</title>
+    <link href="~/css/live.css" rel="stylesheet" />
+    <link href="~/css/main.css" rel="stylesheet" />
+    <link rel="stylesheet" href="~/css/bot.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body style="margin: 0 !important">
+    <!-- Header Navigation -->
+  
+        <div class="container position-relative">
+            <!-- Header/Navigation -->
+            <partial name="_menuPartial" />
+            </div>
+
+    <!-- Main Content -->
+    <main>
+        <div class="container">
+            <div class="chatbot-header">
+                <h3>Chatbot</h3>
+                <h1>What Can You Ask the Chatbot About?</h1>
+            </div>
+
+            <div class="chatbot-container">
+                <!-- Left side - Main Categories -->
+                <div class="categories">
+                    <div class="category-item" data-category="live">
+                        <div class="icon"><i class="fas fa-home"></i></div>
+                        <div class="text">Housing Opportunities</div>
+                    </div>
+                    <div class="category-item" data-category="education">
+                        <div class="icon"><i class="fas fa-book"></i></div>
+                        <div class="text">Education</div>
+                    </div>
+                    <div class="category-item" data-category="social">
+                        <div class="icon"><i class="fas fa-hands-helping"></i></div>
+                        <div class="text">Social Help</div>
+                    </div>
+                    <div class="category-item" data-category="health">
+                        <div class="icon"><i class="fas fa-heartbeat"></i></div>
+                        <div class="text">Health</div>
+                    </div>
+                    <div class="category-item" data-category="mobility">
+                        <div class="icon"><i class="fas fa-bus"></i></div>
+                        <div class="text">Mobility</div>
+                    </div>
+                    <div class="category-item" data-category="work">
+                        <div class="icon"><i class="fas fa-briefcase"></i></div>
+                        <div class="text">Work</div>
+                    </div>
+                    <div class="category-item" data-category="integrate">
+                        <div class="icon"><i class="fas fa-users"></i></div>
+                        <div class="text">Integrate / Belonging</div>
+                    </div>
+                </div>
+
+                <!-- Right side - Chat Area -->
+                <div class="chat-area">
+                    <!-- Subcategories will appear here -->
+                    <div id="subcategories" class="subcategories">
+                        <p>Let's find the right educational support for you.</p>
+                        <p>Are you looking for:</p>
+
+                        <!-- Example subcategories (will be populated by JS) -->
+                        <div class="response-options">
+                            <div class="response-option">
+                                <h4>Schools</h4>
+                                <p>for children or teenagers</p>
+                            </div>
+                            <div class="response-option">
+                                <h4>University</h4>
+                                <p>University or higher education</p>
+                            </div>
+                            <div class="response-option">
+                                <h4>Non-degree Education</h4>
+                                <p>language, skills, job training</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Chat messages will appear here -->
+                    <div id="chat-messages" class="chat-messages">
+                        <!-- Messages will be added here dynamically -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+   
+
+    <script src="~/js/bot.js"></script>
+</body>
+</html>

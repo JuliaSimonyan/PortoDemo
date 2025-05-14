@@ -1,0 +1,247 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: #f5f9ff;
+    color: #333;
+}
+
+
+
+/* Main content styles */
+main {
+    background: linear-gradient(135deg, #00205b 0%, #0088cc 100%);
+    min-height: 100vh;
+    padding: 40px 0 80px;
+}
+
+.chatbot-header {
+    color: white;
+    margin-bottom: 30px;
+}
+
+.chatbot-header h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.chatbot-header h1 {
+    font-size: 36px;
+    font-weight: bold;
+}
+
+/* Chatbot container */
+.chatbot-container {
+    background-color: rgba(245, 249, 255, 0.95);
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    display: flex;
+    gap: 30px;
+    min-height: 400px;
+}
+
+/* Left panel - Categories */
+.categories {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.category-item {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    color: #0a3c6e;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.category-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.category-item.active {
+    border: 2px solid #0066cc;
+}
+
+.category-item .icon {
+    color: #0066cc;
+}
+
+.category-item .text {
+    font-weight: 500;
+    font-size: 16px;
+}
+
+/* Right panel - Chat Area */
+.chat-area {
+    flex: 1.5;
+    display: flex;
+    flex-direction: column;
+    color: #0a3c6e;
+}
+
+.subcategories p {
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.response-options {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.response-option {
+    background-color: #d1e3ff;
+    border-radius: 10px;
+    padding: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.response-option:hover {
+    background-color: #bae0ff;
+}
+
+.response-option h4 {
+    color: #0066cc;
+    margin-bottom: 5px;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.response-option p {
+    color: #555;
+    font-size: 14px;
+    margin: 0;
+}
+
+/* Questions list */
+.question-item {
+    padding: 15px;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.question-item:hover {
+    background-color: #f5f5f5;
+}
+
+/* Back button */
+.back-button {
+    background: none;
+    border: none;
+    color: #0066cc;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+
+.back-button i {
+    margin-right: 8px;
+}
+
+/* Chat messages */
+.chat-messages {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-height: 300px;
+    overflow-y: auto;
+    padding-right: 10px;
+}
+
+.message {
+    padding: 15px;
+    border-radius: 10px;
+    max-width: 80%;
+}
+
+.user-message {
+    background-color: #0066cc;
+    color: white;
+    align-self: flex-end;
+}
+
+.bot-message {
+    background-color: #e6f0ff;
+    color: #333;
+    align-self: flex-start;
+}
+
+/* Responsive styles */
+@media (max-width: 992px) {
+    .chatbot-container {
+        flex-direction: column;
+    }
+    
+    .footer-content {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .chatbot-header h1 {
+        font-size: 28px;
+    }
+    
+    .footer-content {
+        grid-template-columns: 1fr;
+    }
+    
+    .footer-bottom {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 576px) {
+    nav ul {
+        gap: 15px;
+    }
+    
+    .chatbot-container {
+        padding: 20px;
+    }
+}
+/* Animation keyframes */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Apply to bot messages */
+.message.bot-message {
+    background-color: #e6f0ff;
+    color: #333;
+    align-self: flex-start;
+    animation: fadeInUp 0.4s ease forwards;
+}
