@@ -49,6 +49,13 @@ builder.Services.AddRazorPages();
 
 var app = builder.Build();
 
+using (var scope = app.Services.CreateScope())
+{
+    var db = scope.ServiceProvider.GetRequiredService<ApplicationContext>();
+    db.Database.Migrate(); 
+}
+
+
 // Seed Admin User
 using (var scope = app.Services.CreateScope())
 {
